@@ -18,7 +18,7 @@
         <li><a href="#write">Write to us</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#">Register</a></li>
-	    <li><a class="link" href="login.html">LOGIN</a></li>
+	    <li><a class="link" href="login.php">LOGIN</a></li>
 	  </ul>
 	 </div> 
 </div>
