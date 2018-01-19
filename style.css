@@ -1,0 +1,170 @@
+body{
+	margin: 0;padding: 0;
+	font-family: sans-serif;
+}
+
+#header{
+	position: absolute;
+	margin: 0;padding: 0;
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	z-index: 2;
+}
+
+#header h1 a{
+	font-size: 40px;	
+	color: red;
+	text-decoration:none;
+	float: left;
+	margin-left:40px;
+	margin-bottom: 5px;
+	margin-top: -10px;
+}
+
+#header #navbar ul{
+	margin: 0;padding: 0;
+	float: right;
+	display: flex;
+	margin-right: 20px;
+}
+
+#header #navbar ul li{
+	list-style: none;
+}
+
+#header #navbar ul li a{
+	display: block;
+	padding: 7px 20px;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;	
+}
+
+.link{
+	background:red;
+	opacity: 1;
+	border-radius:5px; 
+	color:white;
+}
+
+section{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+section.sec1{
+	background: url(back1.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	opacity: 0.9;
+}
+
+section.sec2{
+padding: 100px;
+height: auto;
+}
+
+section.sec2 h1{
+	margin: 0;
+	padding: 0;
+	font-size: 60px;
+	color: #262626;
+}
+
+section.sec2 p{
+	font-size: 18px;
+}
+
+section.sec3{
+	background: url(back2.jpg);
+	background-size: inherit;
+	background-attachment: fixed;
+	opacity: 0.9;
+}
+
+/****************************************************************************************************************/
+
+section.sec4{
+	background: url(back4.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.loginbox{
+	width: 320px;
+	height: 420px;
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	border-radius: 10px;
+	box-sizing: border-box;
+	transform: translate(-50%,-50%);
+	padding: 60px 30px;
+}
+
+.avatar
+{
+	width: 100px;
+	height: 100px;
+	position: absolute;top: -50px;
+	left: calc(50% - 50px);
+}
+
+.loginbox h1{
+	color: red;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 0 0 20px;
+}
+
+.loginbox p{
+	margin: 0;padding: 0;
+	font-weight: bold;
+}
+
+.loginbox input{
+	width: 100%;
+	margin-bottom:15px; 
+}
+
+.loginbox input[type="email"],input[type="password"]{
+	border:none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;	
+	color: #fff;
+	font-size: 14px;
+}
+
+.loginbox input[type="submit"]{
+	border:none;
+	outline: none;
+	height: 40px;	
+	background: #fb2020;
+	opacity: 0.9;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}	
+
+.loginbox input[type="submit"]:hover{
+	background:rgba(255,255,255,0.8);
+	color: red;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.loginbox a{
+	color: darkgrey;
+	font-size: 12px;
+	width: 100%; 
+	text-align: right;
+}
+.loginbox a:hover{
+	color:red;
