@@ -19,17 +19,6 @@
 	<h1>Register </h1>
 	<form>
 	<div class="regbox left">
-<!-- 
-<i class="fa fa-user" id="iconr"></i>
-<i class="fa fa-user-o" id="iconr"></i>
-<i class="fa fa-envelope-o fa-fw" id="iconr"></i>
-<i class="fa fa-phone" id="iconr"></i>
-<i class="fa fa-birthday-cake" id="iconr"></i>
-<i class="fa fa-neuter" id="iconr"></i>
-<i class="fa fa-key fa-fw" id="iconr"></i>
-<i class="fa fa-key fa-fw" id="iconr"></i>
-
- -->		
  		<i class="fa fa-user"></i><input id="registerinput" type="text" name="fname" placeholder="Enter First Name" required><br>
 		<i class="fa fa-user-o"></i><input id="registerinput" type="text" name="lname" placeholder="Enter Last Name" required><br>
 		<i class="fa fa-envelope"></i><input id="registerinput" type="email" name="email" placeholder="Enter Email ID" required><br>
@@ -38,7 +27,6 @@
 	</div>
 	<div class="regbox right">
 		<i class="fa fa-birthday-cake"></i><input id="registerinput" type="number" name="age" placeholder="Enter Age" required><br>
-		<!-- <i class="fa fa-neuter"></i><input id="registerinput" type="text" name="gender" placeholder="Select Gender" required><br>	 -->
 		<i class="fa fa-neuter"></i><select name="gender" id="registerinput" placeholder="select gender">
 			<option value="">--- select gender ---</option>
 			<option value="">Male</option>
