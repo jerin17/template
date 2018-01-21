@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>template</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">	
 </head>
 <body>
 
@@ -17,13 +18,21 @@
         <li><a href="#about">About Us</a></li>
         <li><a href="#write">Write to us</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#">Register</a></li>
+        <li><a href="register.php" class="red">Register</a></li>
 	    <li><a class="link" href="login.php">LOGIN</a></li>
 	  </ul>
 	 </div> 
 </div>
 	
 <section class="sec1">
+	<div class="indexbox">
+        <p>We help you to hire</p>
+        <h2>expert freelancers</h2>
+		  <a href="#" class="btn normal">Become a freelancer <i class="fa fa-search"></i></a>
+          <a href="#" class="btn inverse">Post a Job <i class="fa fa-pencil"></i></a>
+
+	</div>
+
 	
 </section>
 

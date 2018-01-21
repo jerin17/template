@@ -1,0 +1,309 @@
+	body{
+		margin: 0;padding: 0;
+		font-family: sans-serif;
+	}
+
+	.red{
+		color:red;
+	}
+
+	#header{
+		position: absolute;
+		margin: 0;padding: 0;
+		background: rgba(0,0,0,0.6);
+		width: 100%;
+		z-index: 2;
+	}
+
+	#header h1 a{
+		font-size: 40px;	
+		color: red;
+		text-decoration:none;
+		float: left;
+		margin-left:40px;
+		margin-bottom: 5px;
+		margin-top: -10px;
+	}
+
+	#header #navbar ul{
+		margin: 0;padding: 0;
+		float: right;
+		display: flex;
+		margin-right: 20px;
+	}
+
+	#header #navbar ul li{
+		list-style: none;
+	}
+
+	#header #navbar ul li a{
+		display: block;
+		padding: 7px 20px;
+		text-decoration: none;
+		color: white;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 14px;	
+	}
+
+	.link{
+		background:red;
+		opacity: 1;
+		border-radius:5px; 
+		color:white;
+	}
+
+	section{
+		width: 100%;
+		height: 100vh;
+		box-sizing: border-box;
+	}
+
+	section.sec1{
+		background: url(back3.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	section.sec2{
+	padding: 100px;
+	height: auto;
+	}
+
+	section.sec2 h1{
+		margin: 0;
+		padding: 0;
+		font-size: 60px;
+		color: #262626;
+	}
+
+	section.sec2 p{
+		font-size: 18px;
+	}
+
+	section.sec3{
+		background: url(back2.jpg);
+		background-size: inherit;
+		background-attachment: fixed;
+		opacity: 0.9;
+	}
+
+	/****************************************************************************************************************/
+	/****************************************************************************************************************/
+
+	section.sec4{
+		background: url(back4.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	.loginbox,.registerbox{
+		width: 320px;
+		height: 430px;
+		background: rgba(0,0,0,0.8);
+		color: #fff;
+		left: 50%;
+		top: 55%;
+		position: absolute;
+		border-radius: 10px;
+		box-sizing: border-box;
+		transform: translate(-50%,-50%);
+		padding: 60px 30px;
+	}
+
+	.avatar
+	{
+		width: 100px;
+		height: 100px;
+		position: absolute;top: -50px;
+		left: calc(50% - 50px);
+	}
+
+	.loginbox h1{
+		color: red;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 0 0 20px;
+	}
+
+	.loginbox p{
+		margin: 0;padding: 0;
+		font-weight: bold;
+	}
+
+	.loginbox input,.registerbox input{
+		width: 100%;
+		margin-bottom:15px; 
+	}
+
+	.loginbox input[type="email"],.loginbox input[type="password"],#registerinput{
+		border:none;
+		border-bottom: 1px solid #fff;
+		background: transparent;
+		outline: none;
+		height: 40px;	
+		color: #fff;
+		font-size: 14px;
+	}
+
+	.loginbox input[type="submit"]{
+		border:none;
+		outline: none;
+		height: 40px;	
+		background: #fb2020;
+		opacity: 0.9;
+		color: #fff;
+		font-size: 18px;
+		border-radius: 20px;
+	}	
+
+	.loginbox input[type="submit"]:hover,.registerbox input[type="submit"]:hover{
+		background:rgba(255,255,255,0.8);
+		color: red;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	.loginbox a,.registerbox a{
+		color: darkgrey;
+		font-size: 12px;
+		width: 100%; 
+		text-align: right;
+	}
+	.loginbox a:hover,.registerbox a:hover{
+		color:red;
+	}
+
+	#icon{
+		float: right;
+		position:relative;
+		top:-45px;
+		left: -5px;
+		padding: 4px 0 4px 5px;
+		border-left: 1px solid grey;
+	}
+	/****************************************************************************************************************/
+	/****************************************************************************************************************/
+
+	.registerbox{
+		width:65%;
+		height: 420px;
+		margin:15px 0 0 0;
+	}
+
+	.regbox{
+		margin: 0;padding: 0;
+		padding-bottom: 5px;
+		width: 49%;
+		text-align: center;
+	}
+
+	.left{
+		float: left;
+	}
+	.right{
+		float: right;
+		margin-left: 0px;
+		border-left: 1px solid red;
+	}
+	.clear{
+		float:left;width: 100%;
+	}
+
+	.registerbox input{
+		width: 75%;
+		margin-bottom:10px;
+		padding: 0 0 0 10px;
+	}
+
+	.regbox select{
+		width: 77%;
+		color: white;
+		text-align-last:center;
+	}
+	.regbox select option{
+		color: black;
+		text-align-last: center;
+	}
+
+	.registerbox input[type="submit"]{
+		width: 15%;
+		border:none;
+		margin-top: 10px;	
+		height: 35px;	
+		background: #fb2020;
+		opacity: 0.9;
+		color: #fff;
+		font-size: 18px;
+		border-radius: 20px;
+	}	
+	/****************************************************************************************************************/
+	/****************************************************************************************************************/
+
+	.indexbox{
+		width: 1200px;
+		height: 500px;
+		text-align: center;
+		text-transform: uppercase;
+		left: 50%;
+		top: 50%;
+		position: absolute;
+		box-sizing: border-box;
+		transform: translate(-50%,-50%);
+		padding: 70px 30px;
+		font-family: serif;
+		color: white;
+	}
+
+	.indexbox p{
+		color: black;
+		font-size: 40px;
+		font-weight: bold;
+	}
+	.indexbox h2{
+		margin-top:-10px;
+		font-size: 80px;
+		color: black;
+		text-shadow: 2px 2px white;
+	}
+
+	.indexbox ul{
+		display: flex;	
+	}
+
+	.indexbox ul li {
+		list-style: none;
+	}
+
+	.indexbox ul li a{
+		text-decoration: none;
+		color: white;
+		font-weight: bold;
+		font-size: 14px;	
+	}
+
+	.btn{
+		padding: 15px;
+		margin:20px;
+		border-radius: 5px;
+		font-size: 16px;	
+		text-decoration: none;
+	}
+	.normal{
+		background: red;
+		color:white;
+	}
+	.inverse{
+		background:white;
+		color: red;
+	}
+
+	.normal:hover{
+		background:white;
+		color: red;
+		font-weight: bold;
+	}
+	.inverse:hover{
+		background: red;
+		color:white;
+	}
