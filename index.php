@@ -13,18 +13,17 @@
 
     <div id="navbar">
       <ul>
-        <li><a href="#top">Home</a></li>         
+        <li><a href="#home">Home</a></li>         
         <li><a href="#jobs">Jobs</a></li>         
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#write">Write to us</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#write">Contact Us</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="register.php" class="red">Register</a></li>
 	    <li><a class="link" href="login.php">LOGIN</a></li>
 	  </ul>
 	 </div> 
 </div>
 	
-<section class="sec1">
+<section class="sec1" id="home">
 	<div class="indexbox">
         <p>We help you to hire</p>
         <h2>expert freelancers</h2>
@@ -36,7 +35,7 @@
 	
 </section>
 
-<section class="sec2">
+<section class="sec2" id="jobs">
 	<h1>Start Freelancing</h1>
 
 	<div class="job">
@@ -71,7 +70,8 @@
 	</div>
 
 </section>
-<section class="sec3">
+
+<section class="sec3" id="write">
 	<h1>Got a Suggestion for us ?</h1>
 	<div class="contactbox">
 	<div class="cont-left">
@@ -80,6 +80,7 @@
 	<form>
 	<div class="cont-right">
  		<form action="">
+ 		<h2>Send a message <i class="fa fa-envelope-o"></i></h2>
  		<input id="contactinput" type="text" name="fname" placeholder="Name (optional)" required><br>
 		<input id="contactinput" type="email" name="email" placeholder="Email ID" required><br>
 		<textarea id="contactinput" name="message" rows="8" placeholder="Message"></textarea>
@@ -92,12 +93,12 @@
 
 </section>
 
-<section class="sec5">
+<section class="sec5" id="about">
 <div class="about">
 	<h1>Who are we </h1>
 	<p>Hireling.com is a freelancing and crowdsourcing marketplace by number of users and projects. We connect employers and freelancers globally from over the world. Through our marketplace, employers can hire freelancers to do work in areas such as software development, writing, data entry and design right through to engineering, the sciences, sales and marketing, accounting and legal services.</p>
 
-			<hr size="1" color="red" width="70%">
+			<hr size="1" color="red" width="60%">
 <h2>Team</h2>
 </div>
 <div class="team">
@@ -147,9 +148,26 @@
 		</div>
 	</div>
 	<div class="teamcol" id="hide"></div>
-
 </div>
 </section>
-
+<div class="teamclear"></div>
+<section class="sec6">
+	<div class="footleft">
+		<h1>WHAT'S HIRELING ???</h1>
+		<p>Hireling.com is a freelancing and crowdsourcing marketplace by number of users and projects. We connect employers and freelancers globally from over the world.</p>
+		<p>Post a project today and get bids from talented freelancers</p>
+	</div>
+	
+	<div class="footright">
+		<p> ---- SITEMAP ---- </p>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="">Contact</a></li>
+			<li><a href="">Register</a></li>
+			<li><a href="">Login</a></li>
+		</ul>
+	</div>
+</section>
 </body>
 </html>
