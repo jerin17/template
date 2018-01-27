@@ -5,6 +5,10 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
+::-webkit-scrollbar{width: 8px;}
+::-webkit-scrollbar-thumb{border-radius: 10px;background: rgba(255,0,0,0.7);}
+::-webkit-scrollbar-track{border-radius: 10px;background: lightgrey;}
+
 .red{
 	color:red;
 }
@@ -376,7 +380,7 @@ section.sec3 h1{
 	margin: 0px;
 	padding-left: 10px;
 	font-size: 50px;
-	color: white;
+	color: #000;
 }
 
 .contactbox{
