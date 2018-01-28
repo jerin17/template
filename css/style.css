@@ -6,8 +6,8 @@ body{
 }
 
 ::-webkit-scrollbar{width: 8px;}
-::-webkit-scrollbar-thumb{border-radius: 10px;background: rgba(255,0,0,0.7);}
-::-webkit-scrollbar-track{border-radius: 10px;background: lightgrey;}
+::-webkit-scrollbar-thumb{background: rgba(255,0,0,0.7);}
+::-webkit-scrollbar-track{background: lightgrey;}
 
 .red{
 	color:red;
@@ -18,7 +18,6 @@ body{
 	margin: 0;padding: 0;
 	background: rgba(0,0,0,0.6);
 	width: 100%;
-	z-index: 2;
 }
 
 #header h1 a{
@@ -37,10 +36,10 @@ body{
 	display: flex;
 	margin-right: 20px;
 }
-#header #navbar ul li:hover{
-	background: red;
+#header #navbar ul li a:hover{
 	color: white;
 	border-radius: 5px;
+	font-size:16px;
 }
 #header #navbar ul li{
 	list-style: none;
@@ -61,6 +60,49 @@ body{
 	opacity: 1;
 	border-radius:5px; 
 	color:white;
+}
+
+.dropbtn {
+	padding: 7px 20px;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	background:transparent;
+	border: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: lightgrey;color: red;font-weight: bolder}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: red;
 }
 
 section{
@@ -85,9 +127,9 @@ section.sec4{
 }
 
 .loginbox,.registerbox{
-	width: 320px;
-	height: 430px;
-	background: rgba(0,0,0,0.8);
+	width: 600px;
+	height: 450px;
+	background: rgba(0,0,0,0.9);
 	color: #fff;
 	left: 50%;
 	top: 55%;
@@ -96,6 +138,9 @@ section.sec4{
 	box-sizing: border-box;
 	transform: translate(-50%,-50%);
 	padding: 60px 30px;
+	box-shadow: 0 5px 8px 0 rgba(255,0,0,0.2),0 7px 20px 0 rgba(255,0,0,0.17);	
+	animation-name: modalopen;
+	animation-duration: 1s;
 }
 
 .avatar
@@ -108,7 +153,7 @@ section.sec4{
 
 .loginbox h1{
 	color: red;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	text-align: center;
 	padding: 0 0 20px;
 }
@@ -141,12 +186,16 @@ section.sec4{
 	opacity: 0.9;
 	color: #fff;
 	font-size: 18px;
-	border-radius: 20px;
+	border-radius: 10px;
+	width: 47%;
 }	
-
+#btn2
+{
+float: right;
+background: white;
+color: red;
+}
 .loginbox input[type="submit"]:hover,.registerbox input[type="submit"]:hover{
-	background:rgba(255,255,255,0.8);
-	color: red;
 	font-weight: bold;
 	cursor: pointer;
 }
@@ -642,7 +691,6 @@ section.sec6{height: 130vh;}
 	position: absolute;
 	top: -30px;
 	left: 80px;
-	z-index: 2;
 	font-weight: bold;
 }
 .footright ul{
@@ -666,3 +714,49 @@ section.sec6{height: 130vh;}
 @media screen and (max-width:750px){
 .footright{float: left;}
 }
+
+/****************************************************************************************************************/
+/****************************************************************************************************************/
+
+.button{background: red;color:white;padding: 1em 2em;border:0;
+		border-radius: 5px;cursor: pointer;margin-left: 10px;}	
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 5;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background: rgba(0,0,0,0.5);
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);	
+	animation-name: modalopen;
+	animation-duration: 1s;
+}
+.modal-content{
+	background: #f4f4f4;
+	margin: 10% auto;
+	padding: 10px;
+	width: 50%;
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);	
+	animation-name: modalopen;
+	animation-duration: 1s;
+}
+@keyframes modalopen{
+	from{opacity: 0}
+	tl{opacity: 1}
+}
+#closebtn{
+	color: #ccc
+	float: right;
+	font-size: 30px;
+}
+#closebtn:hover{
+	color: red;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/****************************************************************************************************************/
+/****************************************************************************************************************/

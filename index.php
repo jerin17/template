@@ -10,17 +10,41 @@
 
 <div id="header">
     <h1><a href="index.php">Hireling</a></h1>
-
     <div id="navbar">
       <ul>
         <li><a href="#home">Home</a></li>         
         <li><a href="#jobs">Jobs</a></li>         
         <li><a href="#write">Contact Us</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="register.php" class="red">Register</a></li>
-	    <li><a class="link" href="login.php">LOGIN</a></li>
+			<div class="dropdown">
+			  <button class="dropbtn">Register</button><i class="fa fa-caret-down" style="color:white;position: absolute;left: 	85px;top: 10px;"></i>
+			  <div class="dropdown-content">
+			    <a href="#">Register as a freelancer</a>
+			    <a href="#">Register as a Recruiter</a>
+			  </div>
+			</div>
+ 	    <li><a id="modalbtn" class="button">LOGIN</a></li>
 	  </ul>
 	 </div> 
+</div>
+<div id="simplemodal" class="modal">
+	<div class="loginbox">
+	<a href="index.php"><i class="fa fa-close" id="closebtn" style="position: absolute;top:-40px;left:540px;color: white;font-size: 22px;"></i></a>
+	<img src="css/user.png" class="avatar">	
+	<h1>Freelancer / Recruiter Login </h1>
+	<form action="#">
+		<p>Email ID</p>
+		<input type="email" name="email" placeholder="Enter Email ID" required><i class="fa fa-envelope-o" id="icon"></i>
+		<p>Password</p>
+		<input type="password" name="password" placeholder="Enter Password" required><i class="fa fa-lock" id="icon"></i>
+		<input type="submit" value="Login as Freelancer">
+		<input type="submit" value="Login as Recruiter" id="btn2"><br>
+		<br><a href="#">Forgot Password ?</a><br>
+		<a href="register.php">Don't have an account yet !</a>
+	</form>
+
+	</div>
+	</div>
 </div>
 	
 <section class="sec1" id="home">
@@ -169,5 +193,6 @@
 		</ul>
 	</div>
 </section>
+<script src="js/login.js"></script>
 </body>
 </html>
