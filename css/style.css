@@ -22,7 +22,7 @@ body{
 
 #header h1 a{
 	font-size: 40px;	
-	color: red;
+	color: #1abc9c;
 	text-decoration:none;
 	float: left;
 	margin-left:40px;
@@ -112,7 +112,7 @@ section{
 }
 
 section.sec1{
-	background: url(background/back3.jpg);
+	background: url(background/back5.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -292,18 +292,22 @@ color: red;
 	font-family: serif;
 	color: white;
 }
+@import url('https://fonts.googleapis.com/css?family=Anton');
 
 .indexbox p{
-	color: black;
+	font-family: 'Anton', sans-serif;
+	color: white;
 	font-size: 40px;
+	width: inherit;
 	font-weight: bold;
 }
 .indexbox h2{
+	font-family: 'Anton', sans-serif;
 	margin-top:-10px;
 	margin-bottom: 110px;
+	width: inherit;
 	font-size: 80px;
-	color: black;
-	text-shadow: 4px 2px 2px white;
+	color: white;
 }
 
 .indexbox ul{
