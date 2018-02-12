@@ -6,11 +6,11 @@ body{
 }
 
 ::-webkit-scrollbar{width: 8px;}
-::-webkit-scrollbar-thumb{background: rgba(255,0,0,0.7);}
-::-webkit-scrollbar-track{background: lightgrey;}
+::-webkit-scrollbar-thumb{background: rgba(26,188,156,0.6);}
+::-webkit-scrollbar-track{background: grey;}
 
 .red{
-	color:red;
+	color:#1abc9c;
 }
 
 #header{
@@ -22,14 +22,16 @@ body{
 
 #header h1 a{
 	font-size: 40px;	
-	color: #1abc9c;
+	color: white;
 	text-decoration:none;
 	float: left;
 	margin-left:40px;
 	margin-bottom: 5px;
 	margin-top: -10px;
 }
-
+#header h1 a:hover{
+	color: #1abc9c	
+}
 #header #navbar ul{
 	margin: 0;padding: 0;
 	float: right;
@@ -37,9 +39,8 @@ body{
 	margin-right: 20px;
 }
 #header #navbar ul li a:hover{
-	color: white;
+	color: #1abc9c;
 	border-radius: 5px;
-	font-size:16px;
 }
 #header #navbar ul li{
 	list-style: none;
@@ -51,12 +52,12 @@ body{
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 14px;	
+	font-weight: bolder;
 }
 
 .link{
-	background:red;
+	background:#1abc9c;
 	opacity: 1;
 	border-radius:5px; 
 	color:white;
@@ -95,14 +96,14 @@ body{
     display: block;
 }
 
-.dropdown-content a:hover {background-color: lightgrey;color: red;font-weight: bolder}
+.dropdown-content a:hover {background-color: lightgrey;color: #1abc9c;font-weight: bolder}
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
 .dropdown:hover .dropbtn {
-    color: red;
+    color: #1abc9c;
 }
 
 section{
@@ -112,7 +113,7 @@ section{
 }
 
 section.sec1{
-	background: url(background/back5.jpg);
+	background: url(background/back11.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -138,7 +139,7 @@ section.sec4{
 	box-sizing: border-box;
 	transform: translate(-50%,-50%);
 	padding: 60px 30px;
-	box-shadow: 0 5px 8px 0 rgba(255,0,0,0.2),0 7px 20px 0 rgba(255,0,0,0.17);	
+	box-shadow: 0 5px 8px 0 white,0 7px 20px 0 white);	
 	animation-name: modalopen;
 	animation-duration: 1s;
 }
@@ -152,7 +153,7 @@ section.sec4{
 }
 
 .loginbox h1{
-	color: red;
+	color: #fff;
 	text-transform: capitalize;
 	text-align: center;
 	padding: 0 0 20px;
@@ -182,7 +183,7 @@ section.sec4{
 	border:none;
 	outline: none;
 	height: 40px;	
-	background: #fb2020;
+	background: #1abc9c;
 	opacity: 0.9;
 	color: #fff;
 	font-size: 18px;
@@ -193,11 +194,12 @@ section.sec4{
 {
 float: right;
 background: white;
-color: red;
+color: #1abc9c;
 }
 .loginbox input[type="submit"]:hover,.registerbox input[type="submit"]:hover{
 	font-weight: bold;
 	cursor: pointer;
+	filter: brightness(110%);
 }
 
 .loginbox a,.registerbox a{
@@ -209,7 +211,7 @@ color: red;
 	text-align: right;
 }
 .loginbox a:hover,.registerbox a:hover{
-	color:red;
+	color:#1abc9c;
 }
 
 #icon{
@@ -242,7 +244,7 @@ color: red;
 .right{
 	float: right;
 	margin-left: 0px;
-	border-left: 1px solid red;
+	border-left: 1px solid #1abc9c;
 }
 .clear{
 	float:left;width: 100%;
@@ -297,7 +299,8 @@ color: red;
 .indexbox p{
 	font-family: 'Anton', sans-serif;
 	color: white;
-	font-size: 40px;
+	font-size: 35px;
+	margin-bottom: 50px;
 	width: inherit;
 	font-weight: bold;
 }
@@ -327,13 +330,16 @@ color: red;
 
 .btn{
 	cursor: pointer;
-	padding: 15px;
+	padding: 10px;
 	margin:20px;
 	border-radius: 5px;
 	font-size: 16px;	
 	text-decoration: none;
-	background: red;
+	background:#1abc9c;
+	border: 3px solid #1abc9c;
 	color:white;
+	font-weight: bold;
+	transition-property: background 1s ease-in-out;
 }
 
 @media screen and (max-width:750px){
@@ -345,16 +351,16 @@ color: red;
 
 .inverse{
 	cursor: pointer;
-	background:white;
-	color: red;
+	background:transparent;
+	color: #1abc9c;
 }
 
 .btn:hover{
-	background:white;
-	color: red;
+	filter: brightness(85%);
+	color:white;
 }
 .inverse:hover{
-	background: red;
+	background: #1abc9c;
 	color:white;
 }
 
@@ -364,20 +370,19 @@ color: red;
 section.sec2{
 padding: 40px;
 height: 90vh;
-background: rgba(0,0,0,0.9);
+background:white;
 }
 
 section.sec2 h1{
 	margin: 0;
-	margin-bottom:20px; 
 	padding: 0;
 	font-size: 50px;
-	color: #fff;
+	color: #000;
 }
 
 .job
 {
-	background: lightgrey;
+	background: #34495e;
 	border:1px solid grey;
 	width: 300px;
 	display: block;
@@ -391,9 +396,10 @@ section.sec2 h1{
 }
 
 .job:hover{
-	background: rgba(255,0,0,0.8);
+	background: #1abc9c;
 	transition: 0.8s;
 	color: white;
+	transition: 1s;
 	box-shadow: 4px 4px grey;
 	font-weight: bold;
 }
@@ -411,11 +417,13 @@ section.sec2{height: auto;}
 }
 
 .job h2{
-margin-bottom: 2px;
+	margin-bottom: 2px;
+	color: white;
 }
 
 .job p{
 margin: 0;padding: 10px 0 0 15px;
+color: white;
 }
 
 
@@ -423,7 +431,7 @@ margin: 0;padding: 10px 0 0 15px;
 /****************************************************************************************************************/
 
 section.sec3{
-	background: url(background/back3.jpg);
+	background: url(background/back11.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
 	padding: 10px;margin-bottom:0px;
@@ -433,7 +441,7 @@ section.sec3 h1{
 	margin: 0px;
 	padding-left: 10px;
 	font-size: 50px;
-	color: #000;
+	color: #fff;
 }
 
 .contactbox{
@@ -454,7 +462,7 @@ section.sec3 h1{
 	float: left;
 	padding: 0;
 	margin: 0;
-	background:rgba(255,0,0,0.6);
+	background:white;
 	width: 49%;
 	height:420px;
 	border-radius: 10px 0px 0px 10px;
@@ -480,13 +488,13 @@ section.sec3 h1{
 .cont-right h2{
 	position: absolute;
 	top: -10px;
-	color: red;
+	color: #1abc9c;
 }
 #contactinput{
 	width: 85%;	
 	padding: 10px;
 	border-radius: 10px;
-	border:2px inset red;
+	border:2px inset #1abc9c;
 	margin-bottom:20px;
 	font-size: 14px;
 }
@@ -498,7 +506,7 @@ section.sec3 h1{
 	float: right;
 	margin-right: 40px;
 	border-radius: 5px;
-	background: red;
+	background: #1abc9c;
 	font-weight: bold;
 	color: white;
 	font-size: 15px;
@@ -624,7 +632,7 @@ margin-bottom: 20px;
 	border:1px solid #262626;
 }
 .teamdetails ul li a:hover{
-	background: red;
+	background: #1abc9c;
 	color: #fff;
 	border:0px;
 }
@@ -653,7 +661,7 @@ margin-bottom: 20px;
 }
 
 section.sec6{
-	background: url(background/back3.jpg);
+	background: url(background/back11.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
 	padding: 50px;
@@ -691,7 +699,8 @@ section.sec6{height: 130vh;}
 	margin-top: 20px;
 }
 .footright p{
-	color: white;
+	color: #fff;
+	filter: brightness(80%);
 	position: absolute;
 	top: -30px;
 	left: 80px;
@@ -699,6 +708,7 @@ section.sec6{height: 130vh;}
 }
 .footright ul{
 	color: white;
+	filter: brightness(120%);
 	list-style: square;
 	padding-left: 5px;
 }
@@ -707,13 +717,13 @@ section.sec6{height: 130vh;}
 	border-bottom: 1px solid grey;
 }
 .footright ul li a{
-	color: grey;
+	color: white;
 	font-size: 14px;
 	font-weight: bolder;
 	text-decoration: none;
 }
 .footright ul li a:hover{
-	color: red;
+	color: #1abc9c;
 }
 @media screen and (max-width:750px){
 .footright{float: left;}
@@ -722,8 +732,9 @@ section.sec6{height: 130vh;}
 /****************************************************************************************************************/
 /****************************************************************************************************************/
 
-.button{background: red;color:white;padding: 1em 2em;border:0;
-		border-radius: 5px;cursor: pointer;margin-left: 10px;}	
+.button{background: #1abc9c;color:white;padding: 0 1.5em;border:0;
+		border-radius: 5px;cursor: pointer;margin-left: 10px;}
+.button:hover{filter: brightness(120%);}	
 .modal{
 	display: none;
 	position: fixed;
@@ -749,7 +760,7 @@ section.sec6{height: 130vh;}
 }
 @keyframes modalopen{
 	from{opacity: 0}
-	tl{opacity: 1}
+	to{opacity: 1}
 }
 #closebtn{
 	color: #ccc
@@ -757,10 +768,80 @@ section.sec6{height: 130vh;}
 	font-size: 30px;
 }
 #closebtn:hover{
-	color: red;
+	color: #1abc9c;
 	text-decoration: none;
 	cursor: pointer;
 }
 
+/****************************************************************************************************************/
+/****************************************************************************************************************/
+
+section.fsec1{
+	font-family: 'Open Sans', sans-serif;
+	height: auto;
+	box-sizing: border-box;
+	display:flex;
+	background: #eee;
+	padding: 110px 60px 40px 60px ;
+}
+
+.f_imgbox{
+width: 400px;
+/*flex: 0 0 150px;*/
+}
+.imgbox img{
+width: 350px;
+height: 350px;
+border-radius: 50%;
+padding:7px;
+box-sizing: border-box;
+border: 1px solid lightgrey;
+}
+
+.biobox{
+padding: 40px 0 0 50px;
+}
+.biobox p{
+text-align: justify;
+letter-spacing: .5px;
+}
+
+
+section.fsec2{
+	font-family: 'Open Sans', sans-serif;
+	height: auto;
+	box-sizing: border-box;
+	display:flex;
+	background: #34495e;
+	padding: 20px;
+}
+
+.detailbox{
+width: 600px;
+float: left;
+padding: 20px 0 10px 200px;
+}
+
+.detailbox label{
+
+color: #fff;
+}
+.detailbox b{
+
+color: #1abc9c;
+position: absolute;
+left:25%;
+}
+
+.resumebox{
+padding:20px;
+padding-top: 40px;
+
+}
+
+.resumebox i{
+	font-size: 200px;
+	color: #1abc9c;
+}
 /****************************************************************************************************************/
 /****************************************************************************************************************/

@@ -4,6 +4,7 @@
 	<title>Hireling</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">	
+    <link rel="icon" type="image/gif" href="css/images/logo.png"/>
 </head>
 <body>
 
@@ -16,6 +17,14 @@
         <li><a href="#jobs">Jobs</a></li>         
         <li><a href="#write">Contact Us</a></li>
         <li><a href="#about">About</a></li>
+        <?php 
+		session_start();
+		if(isset($_SESSION['f_email'])){
+		echo '<li><a href="#">Settings</a></li><li><a href="freelancer/dashboard.php">Dashboard</a></li>';	
+		echo '<button class="button" style="background:#e74c3c;"><a href="logout.php" style="color:white;text-decoration:none;">LOGOUT</a></button>';
+		}
+		else{
+		?>
 			<div class="dropdown">
 			  <button class="dropbtn">Register</button><i class="fa fa-caret-down" style="color:white;position: absolute;left: 	85px;top: 10px;"></i>
 			  <div class="dropdown-content">
@@ -23,22 +32,25 @@
 			    <a href="register.php">Register as a Recruiter</a>
 			  </div>
 			</div>
- 	    <li><a id="modalbtn" class="button">LOGIN</a></li>
+ 	    <!-- <li><a id="modalbtn" class="button">LOGIN</a></li> -->
+ 	    <button id="modalbtn" class="button">LOGIN</button>
+	  	<?php } ?>
 	  </ul>
 	 </div> 
 </div>
+
 <div id="simplemodal" class="modal">
 	<div class="loginbox">
 	<a href="index.php"><i class="fa fa-close" id="closebtn" style="position: absolute;top:-40px;left:540px;color: white;font-size: 22px;"></i></a>
 	<img src="css/user.png" class="avatar">	
 	<h1>Freelancer / Recruiter Login </h1>
-	<form action="#">
+	<form action="login.php" method="post">
 		<p>Email ID</p>
 		<input type="email" name="email" placeholder="Enter Email ID" required><i class="fa fa-envelope-o" id="icon"></i>
 		<p>Password</p>
 		<input type="password" name="password" placeholder="Enter Password" required><i class="fa fa-lock" id="icon"></i>
-		<input type="submit" value="Login as Freelancer">
-		<input type="submit" value="Login as Recruiter" id="btn2"><br>
+		<input type="submit" value="Login as Freelancer" name="freelancer">
+		<input type="submit" value="Login as Recruiter" name="recruiter" id="btn2"><br>
 		<br><a href="#">Forgot Password ?</a><br>
 		<a href="register.php">Don't have an account yet !</a>
 	</form>
@@ -53,10 +65,7 @@
         <h2>expert freelancers</h2>
 		  <a href="#" class="btn">Become a freelancer <i class="fa fa-search"></i></a>
           <a href="#" class="btn inverse">Post a Job <i class="fa fa-pencil"></i></a>
-
 	</div>
-
-	
 </section>
 
 <section class="sec2" id="jobs">
@@ -122,7 +131,7 @@
 	<h1>Who are we </h1>
 	<p>Hireling.com is a freelancing and crowdsourcing marketplace by number of users and projects. We connect employers and freelancers globally from over the world. Through our marketplace, employers can hire freelancers to do work in areas such as software development, writing, data entry and design right through to engineering, the sciences, sales and marketing, accounting and legal services.</p>
 
-			<hr size="1" color="red" width="60%">
+			<hr size="1" color="#1abc9c" width="60%">
 <h2>Team</h2>
 </div>
 <div class="team">

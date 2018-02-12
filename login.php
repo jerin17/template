@@ -1,33 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-</head>
-<body>
+<?php    
+include 'config.php';
+session_start();
+$email=$_POST['email'];
+$password=$_POST['password'];
 
-<div id="header">
-    <h1><a href="index.php">Hireling</a></h1>
-</div>
-	
-<section class="sec4">
-	<div class="loginbox">
-	<a href="index.php"><i class="fa fa-close" style="position: absolute;top:-40px;left:265px;color: red;font-size: 22px;"></i></a>
-	<img src="css/user.png" class="avatar">	
-	<h1>Freelancer Login </h1>
-	<form>
-		<p>Email ID</p>
-		<input type="email" name="email" placeholder="Enter Email ID" required><i class="fa fa-envelope-o" id="icon"></i>
-		<p>Password</p>
-		<input type="password" name="password" placeholder="Enter Password" required><i class="fa fa-lock" id="icon"></i>
-		<input type="submit" value="Login" >
-		<a href="#">Forgot Password ?</a><br>
-		<a href="register.php">Don't have an account yet !</a>
-	</form>
+if(isset($_POST['freelancer']))
+{
+  $sql = "SELECT * FROM `freelancers` WHERE f_email='$email' AND f_password='$password'";
+  $result=mysqli_query($conn,$sql);
+  $count = mysqli_num_rows($result);
+  
+    if($count == 1){
+      $_SESSION['f_email'] = $email;
+      header('Location:freelancer/dashboard.php');  
+    }
 
-	</div>
-</section>
+  else{
+        echo $msg = "Invalid Username/Password";
+      }
+}
 
-</body>
-</html>
+if(isset($_POST['recruiter']))
+{
+  $sql2 = "SELECT * FROM `recruiters` WHERE r_email='$email' AND r_password='$password'";
+  $result2=mysqli_query($conn,$sql2);
+  $count2 = mysqli_num_rows($result2);
+  
+    if($count2 == 1){
+      $_SESSION['r_email'] = $email;
+      header('Location:recruiter/dashboard.php');  
+    }
+
+  else{
+        echo $msg = "Invalid Username/Password";
+      }
+}
+
+?>
