@@ -69,7 +69,7 @@
 </section>
 
 <section class="sec2" id="jobs">
-	<h1>Start Freelancing</h1>
+	<h1><b>Start <span>Freelancing</span></b></h1>
 
 	<div class="job">
 		 <img src="css/logo/ravatar.png">

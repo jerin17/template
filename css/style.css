@@ -113,7 +113,7 @@ section{
 }
 
 section.sec1{
-	background: url(background/back11.jpeg);
+	background: url(background/back5.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -368,35 +368,37 @@ color: #1abc9c;
 /****************************************************************************************************************/
 
 section.sec2{
-padding: 40px;
-height: 90vh;
-background:white;
+/*padding-left: 10px;*/
+height: 101vh;
+background:#fff;
 }
 
 section.sec2 h1{
-	margin: 0;
+	margin: 10px 0;
 	padding: 0;
 	font-size: 50px;
 	color: #000;
+	text-align: center;
+}
+section.sec2 h1 span{
+	color: #1abc9c;
 }
 
 .job
 {
-	background: #34495e;
-	border:1px solid grey;
-	width: 300px;
+	background: #222A35;
+	border:.2px solid #ccc;
+	width: 33.3%;
+	/*height: 50%;*/
 	display: block;
-	border-radius: 5px;
 	float: left;
-	padding: 20px;
-	margin: 20px;
-	margin-left: 70px;
-	box-sizing: border-box;
-	font-family:serif;
+	padding: 30px 0;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
 }
 
 .job:hover{
-	background: #1abc9c;
+	filter: brightness(150%);
 	transition: 0.8s;
 	color: white;
 	transition: 1s;
@@ -412,13 +414,17 @@ section.sec2{height: auto;}
 
 .job img {
 	background: white; 
-	width: 60px; 
-	height: 60px;
+	width: 120px; 
+	height: 120px;
+/*	padding: 5px;
+	border-radius: 50%;*/
+	border: 3px inset #1abc9c;
 }
 
 .job h2{
 	margin-bottom: 2px;
-	color: white;
+	color: #1abc9c;
+	font-size: 30px;
 }
 
 .job p{
@@ -734,7 +740,7 @@ section.sec6{height: 130vh;}
 
 .button{background: #1abc9c;color:white;padding: 0 1.5em;border:0;
 		border-radius: 5px;cursor: pointer;margin-left: 10px;}
-.button:hover{filter: brightness(120%);}	
+.button:hover{filter: brightness(125%);}
 .modal{
 	display: none;
 	position: fixed;
@@ -802,46 +808,112 @@ border: 1px solid lightgrey;
 padding: 40px 0 0 50px;
 }
 .biobox p{
-text-align: justify;
+text-align: left;
 letter-spacing: .5px;
 }
-
+.editbio{
+color: white;
+background:#1abc9c;
+padding: 10px 20px;
+position: relative;top: 20px;
+text-decoration: none;
+border-radius: 5px;
+/*filter: brightness(90%);*/
+}
 
 section.fsec2{
 	font-family: 'Open Sans', sans-serif;
 	height: auto;
 	box-sizing: border-box;
 	display:flex;
-	background: #34495e;
-	padding: 20px;
+	background: #222A35;
+	padding: 20px 60px;
 }
+
+.status{
+width: 100%;
+height: auto;
+float: left;
+text-align: center;
+}
+
+.status table{
+	margin:15px 0;
+	width: 100%;
+	filter:brightness(95%);
+	border-radius: 5px;
+	padding: 2px;
+}
+.status caption {
+	color: white;
+	font-size: 25px;
+	font-weight: bolder;
+	margin-bottom: 20px;
+}
+.status table tr
+{	
+	color:#222A35; 
+	font-weight: bold;
+	background-color:lightgrey;
+}
+
+.status table tr:nth-child(odd){
+	background: #F7F7F7;
+}
+
+.status table th{
+	padding: 15px;
+	color: white;
+	background: #1abc9c;
+}
+
+.status table td
+{
+	padding: 7px;
+}
+
+.status table a{
+	color: #222A35;
+}
+
+
+
+
 
 .detailbox{
-width: 600px;
-float: left;
-padding: 20px 0 10px 200px;
+width: 25%;
+margin:20px 0 0 20px;
+padding:45px 21px;
+border-radius: 10px;
+background: #eee;
+border-left: 7px solid #1abc9c;
+text-align: left;
+overflow-x:hidden; 
 }
 
-.detailbox label{
-
-color: #fff;
-}
-.detailbox b{
-
-color: #1abc9c;
+.detailbox .personal{
 position: absolute;
-left:25%;
+transform: translate(-8%,-80%);
+color: #222A35;
+background: #1abc9c;
+padding: 3px 25px;
+font-size: 30px;
+margin-bottom: 20px;
 }
 
-.resumebox{
-padding:20px;
-padding-top: 40px;
-
+.detailbox table td{
+	padding: 5px 0 5px 3px;
+	color: black;
+	font-size: 14px;
+	font-weight: bolder;
 }
 
-.resumebox i{
-	font-size: 200px;
-	color: #1abc9c;
+#detailbox-icon{
+	color: #222A35;
+	font-size: 18px;
+	position: relative;
+	left: -10px;
 }
+
 /****************************************************************************************************************/
 /****************************************************************************************************************/
