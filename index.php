@@ -10,6 +10,7 @@
 
 
 <div id="header">
+	<a href="index.php"><img src="css/images/logo2.png"></a>
     <h1><a href="index.php">Hireling</a></h1>
     <div id="navbar">
       <ul>
@@ -105,25 +106,43 @@
 </section>
 
 <section class="sec3" id="write">
-	<h1>Got a Suggestion for us ?</h1>
-	<div class="contactbox">
-	<div class="cont-left">
-		<iframe height="100%" width="100%" style="border-radius: 10px 0px 0px 10px;" src="https://www.mapsdirections.info/en/custom-google-maps/map.php?width=420&height=420&hl=ru&q=Jamia%20Hamdard%2C%20Hamdard%20Nagar+(Hireling)&ie=UTF8&t=&z=15&iwloc=A&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/custom-google-maps/">Create Google Map</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe>
+<div class="cont-left"></div>
+<div class="cont-left-two">
+	<div class="cont-div">
+		<i class="fa fa-map-marker" aria-hidden="true"></i>
+		<span class="cont-head">Address</span>
+		<div class="cont-content" style="color: #999999">Jamia Hamdard,Badarpur Road, Hamdard Nagar,<br> New Delhi, Delhi 110062</div>
 	</div>
-	<form>
-	<div class="cont-right">
- 		<form action="">
- 		<h2>Send a message <i class="fa fa-envelope-o"></i></h2>
- 		<input id="contactinput" type="text" name="fname" placeholder="Name (optional)" required><br>
-		<input id="contactinput" type="email" name="email" placeholder="Email ID" required><br>
-		<textarea id="contactinput" name="message" rows="8" placeholder="Message"></textarea>
-		<input type="submit" class="contbtn">
-		</form>
+
+	<div class="cont-div">
+		<i class="fa fa-phone" aria-hidden="true"></i>
+		<span class="cont-head">Lets Talk</span>
+		<div class="cont-content">+91-9990480663</div>
 	</div>
+
+	<div class="cont-div">
+		<i class="fa fa-envelope" aria-hidden="true"></i>
+		<span class="cont-head">General Support</span>
+		<div class="cont-content">support@hireling.in</div>
+	</div>
+</div>
+<div class="cont-right">
+	<form action="">
+				<span class="cont-right-head">Send Us A Message</span><br>
+				<label>Tell us your name *</label>
+					<input type="text" name="name" placeholder="First name">
+				
+				<label>Enter your email *</label>
+					<input type="text" name="email" placeholder="Eg. example@email.com">
+				
+				<label>Message *</label>
+					<textarea name="message" rows="5" placeholder="Write us a message"></textarea>
+				
+				<input class="cont-btn" type="submit" name="submit" value="Send Message">
+				
 	</form>
 
-	</div>
-
+</div>
 </section>
 
 <section class="sec5" id="about">
@@ -205,3 +224,7 @@
 <script src="js/login.js"></script>
 </body>
 </html>
+
+<!-- 
+		<iframe height="100%" width="100%" style="border-radius: 10px 0px 0px 10px;" src="https://www.mapsdirections.info/en/custom-google-maps/map.php?width=420&height=420&hl=ru&q=Jamia%20Hamdard%2C%20Hamdard%20Nagar+(Hireling)&ie=UTF8&t=&z=15&iwloc=A&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/custom-google-maps/">Create Google Map</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe>
+ -->

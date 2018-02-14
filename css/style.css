@@ -19,7 +19,19 @@ body{
 	background: rgba(0,0,0,0.6);
 	width: 100%;
 }
-
+#header a img{ 
+	position: absolute;
+	top: 12px;
+	width: 80px;
+	transition: .5s;
+}
+#header a img:hover{ 	
+		transform: scale(1.1);
+}	
+#header h1
+{
+	margin-left: 40px;
+}
 #header h1 a{
 	font-size: 40px;	
 	color: white;
@@ -368,8 +380,7 @@ color: #1abc9c;
 /****************************************************************************************************************/
 
 section.sec2{
-/*padding-left: 10px;*/
-height: 101vh;
+height: 80vh;
 background:#fff;
 }
 
@@ -389,7 +400,6 @@ section.sec2 h1 span{
 	background: #222A35;
 	border:.2px solid #ccc;
 	width: 33.3%;
-	/*height: 50%;*/
 	display: block;
 	float: left;
 	padding: 30px 0;
@@ -414,110 +424,133 @@ section.sec2{height: auto;}
 
 .job img {
 	background: white; 
-	width: 120px; 
-	height: 120px;
-/*	padding: 5px;
-	border-radius: 50%;*/
+	width: 65px; 
+	height: 65px;
+	padding: 5px;
+	border-radius: 50%;
 	border: 3px inset #1abc9c;
 }
 
 .job h2{
+	margin-top: 10px;
 	margin-bottom: 2px;
 	color: #1abc9c;
 	font-size: 30px;
 }
 
 .job p{
-margin: 0;padding: 10px 0 0 15px;
+margin: 0;padding: 0 0 0 15px;
 color: white;
 }
 
 
 /****************************************************************************************************************/
 /****************************************************************************************************************/
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('fonts/poppins/Poppins-SemiBold.ttf'); 
+}
 
 section.sec3{
-	background: url(background/back11.jpeg);
+	background:white;
 	background-size: cover;
 	background-attachment: fixed;
-	padding: 10px;margin-bottom:0px;
-}
-
-section.sec3 h1{
-	margin: 0px;
-	padding-left: 10px;
-	font-size: 50px;
-	color: #fff;
-}
-
-.contactbox{
-	width:65%;
-	height: 420px;
-	margin:0;
-	background: rgba(0,0,0,0.8);
-	color: #fff;
-	left: 50%;
-	top: 40%;
-	position: relative;
-	border-radius: 20px;
-	box-sizing: border-box;
-	transform: translate(-50%,-50%);
+	display: flex;
+	font-family: Poppins-Regular, sans-serif;
 }
 
 .cont-left{
-	float: left;
-	padding: 0;
-	margin: 0;
-	background:white;
-	width: 49%;
-	height:420px;
-	border-radius: 10px 0px 0px 10px;
+	background:url(background/contact.jpg);
+	background-size: cover;
+	width: 50%;
+	margin: 0;padding: 0;
 }
-.cont-left h3{
-	left: 65%;
-	top: 38%;
-	color: lightgrey;
-	font-family: monospace;
-	position: relative;
-	transform: translate(-50%,-50%);
-	font-size: 40px;
-}
-
-.cont-right{
-	float: right;
-	padding-top: 70px;
-	margin:0;
-	width: 49%;
-	height:420px;
-	border-radius: 0px 10px 10px 0px;
-}
-.cont-right h2{
+.cont-left-two{
 	position: absolute;
-	top: -10px;
-	color: #1abc9c;
+	background:rgba(0,0,0,0.7);
+	width: 50%;
+	color: white;
+	height:100%;
+	box-sizing: border-box;
+	padding: 125px 90px;
 }
-#contactinput{
-	width: 85%;	
+.cont-div{
+	margin: 60px auto;
+}
+.cont-head{
+	font-size: 19px;
+	margin-left: 30px;
+}
+.cont-content{
+	font-size: 15px;
+	margin-top: 10px;
+	margin-left: 55px;
+	color: #00ad5f;
+}
+.cont-right{
+	background:#ddd;
+	width: 50%;
+	text-align: center;
+}
+.cont-right form{
+	width: 80%;
+	margin:20px auto;
+}
+.cont-right-head{
+	font-size: 29px;
+}
+.cont-right label{
+	border: 1px solid grey;
+	width: 100%;
+	display: flex;
+	box-sizing: border-box;
 	padding: 10px;
-	border-radius: 10px;
-	border:2px inset #1abc9c;
-	margin-bottom:20px;
+	text-transform: uppercase;
+	margin-top: 30px;
+	color: #555555;
+	background: #ccc;
 	font-size: 14px;
 }
-
-.contbtn{
-	width: 100px;
-	height: auto;
-	padding: 5px;
-	float: right;
-	margin-right: 40px;
-	border-radius: 5px;
-	background: #1abc9c;
-	font-weight: bold;
-	color: white;
-	font-size: 15px;
+.cont-right input,.cont-right textarea{
+	border: 1px solid grey;
+	width: 100%;
+	display: flex;
+	border-top: none;
+	padding: 15px;
+	font-size:15px;
+	box-sizing: border-box;
+	margin-bottom: 35px;	
 }
-
+.cont-right .cont-btn{
+	background: #00ad5f;
+	color: white;
+	width: auto;
+	font-weight: bold;
+	border-radius: 5px;
+	padding: 0 25px;
+	text-transform: uppercase;
+	margin: 20px auto;
+	height: 50px;
+	transition: .7s;
+}
+.cont-right .cont-btn:hover{
+	background: #333;
+}
 /****************************************************************************************************************/
 /****************************************************************************************************************/
 

@@ -10,6 +10,7 @@
 
 
 <div id="header">
+  <a href="../index.php"><img src="../css/images/logo.png"></a>
     <h1><a href="../index.php">Hireling</a></h1>
     <div id="navbar">
       <ul>
