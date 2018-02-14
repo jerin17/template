@@ -16,7 +16,6 @@
       <ul>
         <li><a href="../index.php">Home</a></li>         
         <li><a href="#jobs">Jobs</a></li>         
-        <li><a href="#settings">Settings</a></li>         
         <button class="button" style="background:#e74c3c;"><a href="../logout.php" style="color:white;text-decoration:none;">LOGOUT</a></button>
 	  </ul>
 	 </div> 

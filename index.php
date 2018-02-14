@@ -29,7 +29,7 @@
 			<div class="dropdown">
 			  <button class="dropbtn">Register</button><i class="fa fa-caret-down" style="color:white;position: absolute;left: 	85px;top: 10px;"></i>
 			  <div class="dropdown-content">
-			    <a href="register.php">Register as a freelancer</a>
+			    <a href="register/freelancer">Register as a freelancer</a>
 			    <a href="register.php">Register as a Recruiter</a>
 			  </div>
 			</div>
