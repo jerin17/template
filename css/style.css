@@ -22,11 +22,12 @@ body{
 #header a img{ 
 	position: absolute;
 	top: 12px;
-	width: 80px;
+	left: 3px;
+	width: 75px;
 	transition: .5s;
 }
 #header a img:hover{ 	
-		transform: scale(1.1);
+		transform: scale(1.2);
 }	
 #header h1
 {
@@ -151,7 +152,7 @@ section.sec4{
 	box-sizing: border-box;
 	transform: translate(-50%,-50%);
 	padding: 60px 30px;
-	box-shadow: 0 5px 8px 0 white,0 7px 20px 0 white);	
+	/*box-shadow: 0 2px 3px 0 white,0 2px 2px 0 white;	*/
 	animation-name: modalopen;
 	animation-duration: 1s;
 }
@@ -814,14 +815,13 @@ section.sec6{height: 130vh;}
 
 /****************************************************************************************************************/
 /****************************************************************************************************************/
-
 section.fsec1{
 	font-family: 'Open Sans', sans-serif;
 	height: auto;
 	box-sizing: border-box;
 	display:flex;
-	background: #eee;
-	padding: 110px 60px 40px 60px ;
+	background: url('background/back5.jpg');
+	background-size: 1400px 600px;	padding: 110px 60px 40px 60px ;
 }
 
 .f_imgbox{
@@ -835,10 +835,22 @@ border-radius: 50%;
 padding:7px;
 box-sizing: border-box;
 border: 1px solid lightgrey;
+transition: .5s;
+margin-right: 20px;
+}
+.imgbox img:hover{
+padding: 0;
 }
 
 .biobox{
-padding: 40px 0 0 50px;
+padding: 40px 40px 0 50px;
+color: white;
+text-align: justify;
+background: rgba(0,0,0,0.6);
+border-radius: 5px;
+}
+.biobox:hover{
+	font-weight: bold;
 }
 .biobox p{
 text-align: left;
@@ -859,7 +871,52 @@ section.fsec2{
 	height: auto;
 	box-sizing: border-box;
 	display:flex;
-	background: #222A35;
+	background: url(background/back6.png);
+	padding: 30px 80px;
+}
+
+
+.detailbox{
+	width: 100%;
+	background: #ddd;
+	/*padding-top: 7px;*/
+	margin: 20px 40px;
+	border-radius: 5px;
+	box-shadow: 2px 5px 8px 0 grey;	
+}
+
+.detailbox-head{
+	color: #fff;
+	background: #1abc9c;
+	padding: 10px;
+	border-radius: 5px 5px 0 0;
+	font-size: 18px;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+.detailbox table{
+	margin: 30px 5px;
+	display: flex;
+}
+.detailbox table td{
+	padding: 3px;
+	padding-bottom: 10px;
+}
+.linkcol{color: #0077B5;}
+.gitcol{color:#333;}
+.facecol{color:#3b5999;}
+.instacol{color:#3f729b;}
+
+#detailbox-icon{
+/*color: #333*/
+}
+
+section.fsec3{
+	font-family: 'Open Sans', sans-serif;
+	height: auto;
+	box-sizing: border-box;
+	display:flex;
+	background: url(background/back6.png);
 	padding: 20px 60px;
 }
 
@@ -878,7 +935,7 @@ text-align: center;
 	padding: 2px;
 }
 .status caption {
-	color: white;
+	color: #000;
 	font-size: 25px;
 	font-weight: bolder;
 	margin-bottom: 20px;
@@ -909,44 +966,6 @@ text-align: center;
 	color: #222A35;
 }
 
-
-
-
-
-.detailbox{
-width: 25%;
-margin:20px 0 0 20px;
-padding:45px 21px;
-border-radius: 10px;
-background: #eee;
-border-left: 7px solid #1abc9c;
-text-align: left;
-overflow-x:hidden; 
-}
-
-.detailbox .personal{
-position: absolute;
-transform: translate(-8%,-80%);
-color: #222A35;
-background: #1abc9c;
-padding: 3px 25px;
-font-size: 30px;
-margin-bottom: 20px;
-}
-
-.detailbox table td{
-	padding: 5px 0 5px 3px;
-	color: black;
-	font-size: 14px;
-	font-weight: bolder;
-}
-
-#detailbox-icon{
-	color: #222A35;
-	font-size: 18px;
-	position: relative;
-	left: -10px;
-}
 
 /****************************************************************************************************************/
 /****************************************************************************************************************/

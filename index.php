@@ -21,7 +21,7 @@
         <?php 
 		session_start();
 		if(isset($_SESSION['f_email'])){
-		echo '<li><a href="#">Settings</a></li><li><a href="freelancer/dashboard.php">Dashboard</a></li>';	
+		echo '<li><a href="freelancer/dashboard.php">Dashboard</a></li>';	
 		echo '<button class="button" style="background:#e74c3c;"><a href="logout.php" style="color:white;text-decoration:none;">LOGOUT</a></button>';
 		}
 		else{
@@ -58,13 +58,13 @@
 
 	</div>
 	</div>
-</div>
+</div>	
 	
 <section class="sec1" id="home">
 	<div class="indexbox">
         <p>We help you to hire</p>
         <h2>expert freelancers</h2>
-		  <a href="#" class="btn">Become a freelancer <i class="fa fa-search"></i></a>
+		  <a href="register/freelancer" class="btn">Become a freelancer <i class="fa fa-search"></i></a>
           <a href="#" class="btn inverse">Post a Job <i class="fa fa-pencil"></i></a>
 	</div>
 </section>

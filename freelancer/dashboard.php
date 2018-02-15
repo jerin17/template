@@ -23,7 +23,8 @@
 
 <section class="fsec1">
 <div class="imgbox">
-    <img src="profile_pictures/jerin.jpg">
+    <a href=""><img src="profile_pictures/jerin.jpg"></a>
+    <center style="color: white;font-size: 12px;">Click on the profile picture to edit</center>
 </div>
 <div class="biobox">
     <h2>Name name</h2>
@@ -33,6 +34,44 @@
 </section>
 
 <section class="fsec2">
+
+<div class="detailbox">
+  <center class="detailbox-head">Basic</center>
+<table>
+    <tr><td><i id="detailbox-icon" class="fa fa-user"></i></td><td>Jerin Thomas</td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-envelope"></i></td><td>jerinthomas17@gmail.com</td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-phone"></i></td><td>9990480663</td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-neuter"></i></td><td>Male</td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-birthday-cake"></i></td><td>22</td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-map-marker"></i></td><td>Delhi</td></tr>
+</table>
+</div>
+
+<div class="detailbox">
+  <center class="detailbox-head">Personal Details</center>
+<table>
+    <tr><td><i id="detailbox-icon" class="fa fa-graduation-cap"></i></td><td>Jamia Hamdard</td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-phone"></i></td><td>Student</td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-suitcase"></i></td><td><a target="blank" href="">project link availabe<i class="fa fa-external-link" style="font-size: 12px;"></i></a></td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-file"></i></td><td>Resume not availabe</td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-superpowers"></i></td><td>web development, c++, java</td></tr>
+</table>
+</div>
+
+<div class="detailbox">
+  <center class="detailbox-head">Social Links</center>
+<table>
+    <tr><td><i id="detailbox-icon" class="fa fa-linkedin linkcol"></i></td><td><a target="blank" href="">Connect jerin on LinkedIn<i class="fa fa-external-link" style="font-size: 12px;"></i></a></td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-github gitcol"></i></td><td>Github link not available</td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-facebook facecol"></i></td><td>Facebook link not available</td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-instagram instacol"></i></td><td>Instagram link not available</td></tr>
+</table>
+</div>
+</section>
+
+
+
+<section class="fsec3">
 <div class="status">
 <table border="1" bordercolor="#fff" cellspacing="0">
 <caption>Application Status</caption>
@@ -61,36 +100,7 @@
   <td>Web Development</td>
   <td>applied</td>
 </tr>
-
-</table>
-    
-</div>
-<div class="detailbox">
-<span class="personal">Personal Details</span><br>
-<table>
-    <tr>
-        <td><i id="detailbox-icon" class="fa fa-user"></i></td>
-        <td>Jerin Thomas</td>
-    </tr>
-    <tr>
-        <td><i id="detailbox-icon" class="fa fa-envelope"></i></td>
-        <td>jerinthomas17@gmail.com</td>
-    </tr>
-    <tr>
-        <td><i id="detailbox-icon" class="fa fa-phone"></i></td>
-        <td>9990480663</td>
-    </tr>
-    <tr>
-        <td><i id="detailbox-icon" class="fa fa-neuter"></i></td>
-        <td>Male</td>
-    </tr>
-    <tr>
-        <td><i id="detailbox-icon" class="fa fa-birthday-cake"></i></td>
-        <td>22</td>
-    </tr>
-</table>
-<br><a href="#" style="color: #222A35;float: right;">Edit details <i class="fa fa-pencil-square-o"></i>
-</a>
+</table>    
 </div>
 </section>
 
