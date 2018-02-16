@@ -873,35 +873,47 @@ section.fsec2{
 	box-sizing: border-box;
 	display:flex;
 	background: url(background/back6.png);
-	padding: 30px 80px;
+	/*padding: 30px 80px;*/
 }
 
 
 .detailbox{
 	width: 100%;
-	background: #ddd;
-	/*padding-top: 7px;*/
-	margin: 20px 40px;
-	border-radius: 5px;
-	box-shadow: 2px 5px 8px 0 grey;	
+	/*margin-top: 6px;*/
+	background: #222A35;
+	color: white;
+	border:.2px solid white;
+	/*padding-top: 3px;*/
+	/*margin: 20px 40px;*/
+	/*border-radius: 5px;*/
+	/*box-shadow: 2px 5px 8px 0 grey;	*/
 }
-
+.detailbox:hover{
+	filter: brightness(120%);
+}
 .detailbox-head{
-	color: #fdb913;
-	background: #003d79;
+	color: #fff;
+	background: #1abc9c;
 	padding: 10px;
-	border-radius: 5px 5px 0 0;
+	border:.2px solid white;
+	border-left: none;
 	font-size: 18px;
 	font-weight: bolder;
 	text-transform: uppercase;
 }
+.detailbox-head:hover{filter: brightness(80%);}
 .detailbox table{
-	margin: 30px 5px;
+	padding: 30px;
+	margin: auto 30px;
 	display: flex;
 }
 .detailbox table td{
 	padding: 3px;
 	padding-bottom: 10px;
+}
+.detailbox table td a{
+	color: #1abc9c;
+	text-decoration: none;
 }
 .linkcol{color: #0077B5;}
 .gitcol{color:#333;}
@@ -909,15 +921,17 @@ section.fsec2{
 .instacol{color:#3f729b;}
 
 #detailbox-icon{
-/*color: #333*/
+color: #fff;
+margin-right: 20px;
 }
 
 section.fsec3{
 	font-family: 'Open Sans', sans-serif;
 	height: auto;
+	/*min-height: 500px;*/
 	box-sizing: border-box;
 	display:flex;
-	background: url(background/back4.jpg);
+	background: url(background/back10.jpeg);
 	background-size: cover;
 	padding: 20px 60px;
 }
@@ -937,36 +951,36 @@ text-align: center;
 	box-shadow: 2px 5px 8px 0 grey;	
 }
 .status caption {
-	color: #000;
+	color: #fff;
 	font-size: 25px;
 	font-weight: bolder;
-	margin-bottom: 20px;
+	margin: 0 0 20px 0;
 }
 .status table tr
 {	
 	color:#222A35; 
 	font-weight: bold;
-	background-color:lightgrey;
+	background-color:rgba(0,0,0,0.1);
 }
 
 .status table tr:nth-child(odd){
-	background: #F7F7F7;
+	background-color:rgba(0,0,0,0.6);
 }
 
 .status table th{
 	padding: 15px;
-	color: white;
-	color: #fdb913;
-	background: #003d79;
+	color: #fff;
+	background: #1abc9c;
 }
 
 .status table td
 {
 	padding: 7px;
+	color: #fff;
 }
 
 .status table a{
-	color: #222A35;
+	color: #fff;
 }
 
 

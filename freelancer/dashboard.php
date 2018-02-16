@@ -52,7 +52,7 @@
 <table>
     <tr><td><i id="detailbox-icon" class="fa fa-graduation-cap"></i></td><td>Jamia Hamdard</td></tr>
     <tr><td><i id="detailbox-icon" class="fa fa-phone"></i></td><td>Student</td></tr>
-    <tr><td><i id="detailbox-icon" class="fa fa-suitcase"></i></td><td><a target="blank" href="">project link availabe<i class="fa fa-external-link" style="font-size: 12px;"></i></a></td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-suitcase"></i></td><td><a target="blank" href="">Project link availabe <i class="fa fa-external-link" style="font-size: 12px;"></i></a></td></tr>
     <tr><td><i id="detailbox-icon" class="fa fa-file"></i></td><td>Resume not availabe</td></tr>
     <tr><td><i id="detailbox-icon" class="fa fa-superpowers"></i></td><td>web development, c++, java</td></tr>
 </table>
@@ -61,7 +61,7 @@
 <div class="detailbox">
   <center class="detailbox-head">Social Links</center>
 <table>
-    <tr><td><i id="detailbox-icon" class="fa fa-linkedin linkcol"></i></td><td><a target="blank" href="">Connect jerin on LinkedIn<i class="fa fa-external-link" style="font-size: 12px;"></i></a></td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-linkedin linkcol"></i></td><td><a target="blank" href="">Connect jerin on LinkedIn <i class="fa fa-external-link" style="font-size: 12px;"></i></a></td></tr>
     <tr><td><i id="detailbox-icon" class="fa fa-github gitcol"></i></td><td>Github link not available</td></tr>
     <tr><td><i id="detailbox-icon" class="fa fa-facebook facecol"></i></td><td>Facebook link not available</td></tr>
     <tr><td><i id="detailbox-icon" class="fa fa-instagram instacol"></i></td><td>Instagram link not available</td></tr>

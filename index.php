@@ -5,7 +5,7 @@
     <link rel="icon" type="image/gif" href="css/images/logo.png"/>
 <style>
 body{margin: 0;padding: 0;background: url(css/background/back5.jpg);background-size: cover;}
-#loader-container{background: rgba(0,0,0,0.3);height: 100vh;}
+#loader-container{background: rgba(0,0,0,0.5);height: 100vh;}
 #loader{
 	position: absolute;top: 50%;left: 50%;
 	transform: translate(-50%,-50%)rotate(45deg);

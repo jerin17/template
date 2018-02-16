@@ -32,18 +32,18 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     <li>Personal Details</li>
     <li>Educational Qualification</li>
   </ul>
-  <fieldset class="field" id="one">
-    <h2 class="fs-title" id="title-one">Create your account</h2>
+  <fieldset class="field">
+    <h2 class="fs-title">Create your account</h2>
     <h3 class="fs-subtitle">This is step 1</h3>
     <input type="text" name="f_name" placeholder="Name*"/>
-    <input type="text" name="f_email" placeholder="Email *"/>
+    <input type="email" name="f_email" placeholder="Email *"/>
     <input type="password" name="f_password" placeholder="Password *"/>
     <input type="password" name="f_cpassword" placeholder="Confirm Password *"/>
     <input type="button" name="next" class="next action-button" value="Next" />
-    <br><span id ="err"style="color: red;font-size: 12px;float: right;margin:0;margin-top: 10px;"></span>
+    <br><span id ="err" style="color: red;font-size: 12px;float: right;margin:0;margin-top: 10px;"></span>
   </fieldset>
-  <fieldset class="field" id="two">
-   <h2 class="fs-title" id="title-two">Personal Credentials</h2>
+  <fieldset class="field">
+   <h2 class="fs-title">Personal Credentials</h2>
     <h3 class="fs-subtitle">Fill in your personal details...</h3>
     <input type="text" name="f_phone" placeholder="Phone*" required/>
     <input type="number" name="f_age" placeholder="Age*"/>
@@ -51,16 +51,17 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     <input type="text" name="f_city" placeholder="City" />
     <input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="button" name="next" class="next action-button" value="Next" />
-    <br><span id ="err"style="color: red;font-size: 12px;float: right;margin:0;margin-top: 10px;"></span>
+    <br><span id ="err2" style="color: red;font-size: 12px;float: right;margin:0;margin-top: 10px;"></span>
   </fieldset>
-  <fieldset class="field" id="three">
-      <h2 class="fs-title" id="title-three">Educational Qualification</h2>
-    <input type="text" name="f_firm" placeholder="School/College/company*"/>
-    <input type="text" name="f_work" placeholder="Work Profile*" required />
+  <fieldset class="field">
+      <h2 class="fs-title">Educational Qualification</h2>
+    <input type="text" name="f_firm" placeholder="School/College/company" required />
+    <input type="text" name="f_work" placeholder="Work Profile" required />
     <input type="text" name="f_project" placeholder="Project link"/>
     <textarea name="f_skill" placeholder="Skills"></textarea>
     <input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="submit" name="register" class="action-button" value="Submit">
+    <br><span id ="err3" style="color: red;font-size: 12px;float: right;margin:0;margin-top: 10px;"></span>
 
   </fieldset>
 </form>

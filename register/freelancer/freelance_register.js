@@ -19,13 +19,89 @@ var work = document.forms.msform.f_work.value;
 
 var f=document.getElementsByClassName('field');
 
+function abc(){
+						if(animating) return false;
+					animating = true;
+					current_fs = $(this).parent();
+					next_fs = $(this).parent().next();
+					$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+					current_fs.removeClass();
+					current_fs.addClass("field");
+					next_fs.show();
+					next_fs.addClass("act");
+					current_fs.animate({opacity: 0}, {
+						step: function(now, mx) {
+							scale = 1 - (1 - now) * 0.2;
+							left = (now * 50)+"%";
+							opacity = 1 - now;
+							current_fs.css({
+				        'transform': 'scale('+scale+')',
+				        'position': 'absolute'
+				      });
+							next_fs.css({'left': left, 'opacity': opacity});
+						}, 
+						duration: 800, 
+						complete: function(){
+							current_fs.hide();
+							animating = false;
+						}, 
+						easing: 'easeInOutBack'
+					});
 
+};
 	if(name==""||email==""||password==""||cpassword=="")	
 		{
+			console.log("1");
 			var err=document.getElementById("err");
 			err.innerHTML="* fields cannot be blank";
-		}
 
+		}
+	else if(password!=cpassword)	
+		{
+			var err=document.getElementById("err");
+			err.innerHTML="Confirm password doesn't match :(";
+		}
+		
+	else if(f[1].className=="field act"){
+			if(phone==""||age==""||gender=="")
+			{
+				console.log("2");
+				var err2=document.getElementById("err2");
+				err2.innerHTML="* fields cannot be blank";
+			}
+
+			else{
+					if(animating) return false;
+					animating = true;
+					current_fs = $(this).parent();
+					next_fs = $(this).parent().next();
+					$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+					current_fs.removeClass();
+					current_fs.addClass("field");
+					next_fs.show();
+					next_fs.addClass("act");
+					current_fs.animate({opacity: 0}, {
+						step: function(now, mx) {
+							scale = 1 - (1 - now) * 0.2;
+							left = (now * 50)+"%";
+							opacity = 1 - now;
+							current_fs.css({
+				        'transform': 'scale('+scale+')',
+				        'position': 'absolute'
+				      });
+							next_fs.css({'left': left, 'opacity': opacity});
+						}, 
+						duration: 800, 
+						complete: function(){
+							current_fs.hide();
+							animating = false;
+						}, 
+						easing: 'easeInOutBack'
+					});
+
+			}
+	}
+	
 	else{
 		
 	if(animating) return false;
@@ -38,7 +114,11 @@ var f=document.getElementsByClassName('field');
 	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 	
 	//show the next fieldset
-	next_fs.show(); 
+	
+	current_fs.removeClass();
+	current_fs.addClass("field");
+	next_fs.show();
+	next_fs.addClass("act");
 	//hide the current fieldset with style
 	current_fs.animate({opacity: 0}, {
 		step: function(now, mx) {
@@ -76,7 +156,11 @@ $(".previous").click(function(){
 	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
 	
 	//show the previous fieldset
+
+	current_fs.removeClass();
+	current_fs.addClass("field");
 	previous_fs.show(); 
+	previous_fs.addClass("act");	
 	//hide the current fieldset with style
 	current_fs.animate({opacity: 0}, {
 		step: function(now, mx) {
