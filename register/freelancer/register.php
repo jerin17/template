@@ -1,5 +1,8 @@
 <?php 
-include 'config.php';
+@$conn = mysqli_connect('localhost','root','seoul','template');
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
 if(isset($_POST['register']))
 {
 	$f_name=$_POST['f_name'];$f_email=$_POST['f_email'];$f_password=$_POST['f_password'];

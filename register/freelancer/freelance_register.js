@@ -4,7 +4,30 @@ var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
+	
 $(".next").click(function(){
+
+var name = document.forms.msform.f_name.value;  	
+var email = document.forms.msform.f_email.value;  	
+var password = document.forms.msform.f_password.value;  	
+var cpassword = document.forms.msform.f_cpassword.value;  	
+var phone = document.forms.msform.f_phone.value;  	
+var age = document.forms.msform.f_age.value;  	
+var gender = document.forms.msform.f_gender.value;  	
+var firm = document.forms.msform.f_firm.value;  	
+var work = document.forms.msform.f_work.value;  	
+
+var f=document.getElementsByClassName('field');
+
+
+	if(name==""||email==""||password==""||cpassword=="")	
+		{
+			var err=document.getElementById("err");
+			err.innerHTML="* fields cannot be blank";
+		}
+
+	else{
+		
 	if(animating) return false;
 	animating = true;
 	
@@ -40,7 +63,7 @@ $(".next").click(function(){
 		//this comes from the custom easing plugin
 		easing: 'easeInOutBack'
 	});
-});
+}});
 
 $(".previous").click(function(){
 	if(animating) return false;

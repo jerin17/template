@@ -821,6 +821,7 @@ section.fsec1{
 	box-sizing: border-box;
 	display:flex;
 	background: url('background/back5.jpg');
+	background-attachment: fixed;
 	background-size: 1400px 600px;	padding: 110px 60px 40px 60px ;
 }
 
@@ -886,8 +887,8 @@ section.fsec2{
 }
 
 .detailbox-head{
-	color: #fff;
-	background: #1abc9c;
+	color: #fdb913;
+	background: #003d79;
 	padding: 10px;
 	border-radius: 5px 5px 0 0;
 	font-size: 18px;
@@ -916,7 +917,8 @@ section.fsec3{
 	height: auto;
 	box-sizing: border-box;
 	display:flex;
-	background: url(background/back6.png);
+	background: url(background/back4.jpg);
+	background-size: cover;
 	padding: 20px 60px;
 }
 
@@ -931,8 +933,8 @@ text-align: center;
 	margin:15px 0;
 	width: 100%;
 	filter:brightness(95%);
-	border-radius: 5px;
-	padding: 2px;
+	border-radius: 10px;
+	box-shadow: 2px 5px 8px 0 grey;	
 }
 .status caption {
 	color: #000;
@@ -954,7 +956,8 @@ text-align: center;
 .status table th{
 	padding: 15px;
 	color: white;
-	background: #1abc9c;
+	color: #fdb913;
+	background: #003d79;
 }
 
 .status table td
