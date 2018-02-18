@@ -144,8 +144,30 @@
 
 </div>
 </section>
-<br><br>
-<hr size="1" color="#1abc9c" width="60%">
+<!-- <br><br> -->
+
+<section class="sec7"> 
+   <h6>Whatever It Is, We Can Help</h6><br>
+   <div class="sec7-container">
+      <div class="sec7-content">
+        <div class="div1"><strong>01</strong></div>
+          <div class="div2"><h6><a href="">What kind of work can I get done?</a></h6><br>
+          <p>Small jobs, large jobs, anything in-between</p></div>
+      </div>
+    
+       <div class="sec7-content">
+        <div class="div1"><strong>02</strong></div>
+          <div class="div2"><h6><a href="">How does it Work ?</a></h6><br>
+          <p>1. Post your project<br>2. Choose the perfect freelancer<br>3. Pay when you are satisfied!</p></div>
+      </div>
+      <div class="sec7-content">
+        <div class="div1"><strong>03</strong></div>
+          <div class="div2"><h6><a href="">Get free quotes. It's quick and easy</a></h6>
+          <p>It only takes minutes to create new projects, get competitive quotes and choose your freelancer.</p></div>
+      </div>
+	</div>
+</section>
+<!-- <hr size="1" color="#1abc9c" width="60%"> -->
 
 <section class="sec5" id="about">
 <div class="about">
