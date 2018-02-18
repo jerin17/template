@@ -43,7 +43,7 @@
 <div id="simplemodal" class="modal">
 	<div class="loginbox">
 	<a href="home.php"><i class="fa fa-close" id="closebtn" style="position: absolute;top:-40px;left:540px;color: white;font-size: 22px;"></i></a>
-	<img src="css/user.png" class="avatar">	
+	<img src="css/images/logo.png" class="avatar">	
 	<h1>Freelancer / Recruiter Login </h1>
 	<form action="login.php" method="post">
 		<p>Email ID</p>

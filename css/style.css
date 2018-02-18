@@ -160,10 +160,11 @@ section.sec4{
 .avatar
 {
 	width: 100px;
-	height: 100px;
-	position: absolute;top: -50px;
+	position: absolute;top: -30px;
 	left: calc(50% - 50px);
+	transition: 1.3s;
 }
+.avatar:hover{transform: scale(1.3);}
 
 .loginbox h1{
 	color: #fff;
@@ -841,6 +842,12 @@ margin-right: 20px;
 }
 .imgbox img:hover{
 padding: 0;
+cursor: pointer;
+}
+#imgspan{
+	color: white;
+	font-size: 12px;
+	margin-top: 10px;
 }
 
 .biobox{
@@ -849,6 +856,7 @@ color: white;
 text-align: justify;
 background: rgba(0,0,0,0.6);
 border-radius: 5px;
+cursor: pointer;
 }
 .biobox:hover{
 	font-weight: bold;
@@ -864,9 +872,15 @@ padding: 10px 20px;
 position: relative;top: 20px;
 text-decoration: none;
 border-radius: 5px;
-/*filter: brightness(90%);*/
+cursor: pointer;
 }
-
+#biospan{
+	color: white;
+	font-size: 12px;
+	float: right;
+	margin-top: 60px;
+	margin-right: -20px;
+}
 section.fsec2{
 	font-family: 'Open Sans', sans-serif;
 	height: auto;
@@ -888,10 +902,10 @@ section.fsec2{
 	/*border-radius: 5px;*/
 	/*box-shadow: 2px 5px 8px 0 grey;	*/
 }
-.detailbox:hover{
+/*.detailbox:hover{
 	filter: brightness(120%);
 }
-.detailbox-head{
+*/.detailbox-head{
 	color: #fff;
 	background: #1abc9c;
 	padding: 10px;
@@ -901,10 +915,10 @@ section.fsec2{
 	font-weight: bolder;
 	text-transform: uppercase;
 }
-.detailbox-head:hover{filter: brightness(80%);}
+.detailbox-head:hover{filter: brightness(110%);cursor: pointer;}
 .detailbox table{
 	padding: 30px;
-	margin: auto 30px;
+	margin: 20px 30px 0 30px;
 	display: flex;
 }
 .detailbox table td{
@@ -915,10 +929,12 @@ section.fsec2{
 	color: #1abc9c;
 	text-decoration: none;
 }
-.linkcol{color: #0077B5;}
-.gitcol{color:#333;}
-.facecol{color:#3b5999;}
-.instacol{color:#3f729b;}
+.editbtn{color: #1abc9c;float: right;margin: 25px 30px 0 0;font-size: 30px;}
+.editbtn:hover{color: #fff;cursor: pointer;}
+#linkcol{color:#0077B5;}
+#gitcol{color:#999;}
+#facecol{color:#3b5999;}
+#instacol{color:#3f729b;}
 
 #detailbox-icon{
 color: #fff;
@@ -983,6 +999,142 @@ text-align: center;
 	color: #fff;
 }
 
+/****************************************************************************************************************/
+/****************************************************************************************************************/
+.dashmodal{
+	display:none;
+	position: fixed;
+	z-index: 5;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background: rgba(0,0,0,0.5);
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);	
+	animation-name: dashmodalopen;
+	animation-duration: 1s;
+}
 
-/****************************************************************************************************************/
-/****************************************************************************************************************/
+.dashmodal-content{
+	background: #f4f4f4;
+	margin: 10% auto;
+	padding: 10px;
+	width: 50%;
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);	
+	animation-name: dashmodalopen;
+	animation-duration: 1s;
+}
+@keyframes dashmodalopen{
+	from{opacity: 0}
+	to{opacity: 1}
+}
+#closebtn{
+	color: #ccc
+	float: right;
+	font-size: 30px;
+}
+#closebtn:hover{
+	color: #1abc9c;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.dashbox{
+	width: 600px;
+	height: auto;
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	left: 50%;
+	top: 53%;
+	position: absolute;
+	border-radius: 10px;
+	box-sizing: border-box;
+	transform: translate(-50%,-50%);
+	padding: 60px 30px 20px 30px ;
+	animation-name: modalopen;
+	animation-duration: 1s;
+}
+
+.dashlogo{
+	width: 100px;
+	position: absolute;top: -30px;
+	left: calc(50% - 50px);
+	transition: 1.3s;
+}
+.dashlogo:hover{transform: scale(1.3);}
+
+.dashbox h1{
+	float: right;
+	font-size: 25px;
+	margin-top: -20px;
+	color: #fff;
+	filter: brightness(110%);
+}
+.dashbox i{
+	float: right;
+	color: white;
+	font-size: 20px;
+	margin-top: -40px;
+}
+
+.dashbox form{
+	margin-top: 20px;
+}
+.dashbox form label{
+	font-size: 10px;
+	margin: 0;
+}
+
+.dashbox form input,.dashbox form textarea{
+	width: 100%;
+	margin-top: -5px;
+	/*padding-left: 20px;*/
+	text-align: center;
+	margin-bottom:10px;
+	border:none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;	
+	color: #fff;
+	font-size: 13px;
+}
+.dashbox form textarea{
+	min-height: 200px;
+	font-size: 110%;
+	padding: 0px;
+	text-align: justify;
+}
+
+#skills{
+	min-height: 50px;
+}
+.dashbox form input[type="submit"]{
+	border:none;
+	outline: none;
+	height: 40px;	
+	background: #1abc9c;
+	opacity: 0.9;
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+	border-radius: 4px;
+	margin-top: 5px;
+}
+
+.pictureimg{
+text-align: center;
+}
+
+#pictureimg {
+	width: 150px;
+	height: 150px;	
+	padding: 1px;
+	border:2px inset #fff;
+}
+.xpng{
+	position: relative;
+	left: 350px;
+}
+.xpng:hover{cursor: pointer;}
