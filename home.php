@@ -2,11 +2,25 @@
 <html>
 <head>
 	<title>Hireling</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">	
     <link rel="icon" type="image/gif" href="css/images/logo.png"/>
 </head>
-<body>
+<!-- <style>
+.animate-bottom {
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+</style>
+ -->
+ <body>
 
 
 <div id="header">
@@ -20,9 +34,16 @@
         <li><a href="#about">About</a></li>
         <?php 
 		session_start();
-		if(isset($_SESSION['f_email'])){
-		echo '<li><a href="freelancer/dashboard.php">Dashboard</a></li>';	
-		echo '<button class="button" style="background:#e74c3c;"><a href="logout.php" style="color:white;text-decoration:none;">LOGOUT</a></button>';
+		if (isset($_SESSION['user'])) {
+			if($_SESSION['user']=="f"){
+			echo '<li><a href="freelancer/dashboard.php">Dashboard</a></li>';	
+			echo '<button class="button" style="background:#e74c3c;"><a href="logout.php" style="color:white;text-decoration:none;">LOGOUT</a></button>';
+			}
+
+			else if($_SESSION['user']=="r"){
+			echo '<li><a href="recruiter/dashboard.php">Dashboard</a></li>';	
+			echo '<button class="button" style="background:#e74c3c;"><a href="logout.php" style="color:white;text-decoration:none;">LOGOUT</a></button>';
+			}
 		}
 		else{
 		?>
@@ -53,14 +74,14 @@
 		<input type="submit" value="Login as Freelancer" name="freelancer">
 		<input type="submit" value="Login as Recruiter" name="recruiter" id="btn2"><br>
 		<br><a href="#">Forgot Password ?</a><br>
-		<a href="register.php">Don't have an account yet !</a>
+		<a href="register/freelancer">Don't have an account yet !</a>
 	</form>
 
 	</div>
 	</div>
 </div>	
 	
-<section class="sec1" id="home">
+<section class="sec1 animate-bottom" id="home">
 	<div class="indexbox">
         <p>We help you to hire</p>
         <h2>expert freelancers</h2>
@@ -105,50 +126,10 @@
 
 </section>
 
-<section class="sec3" id="write">
-<div class="cont-left"></div>
-<div class="cont-left-two">
-	<div class="cont-div">
-		<i class="fa fa-map-marker" aria-hidden="true"></i>
-		<span class="cont-head">Address</span>
-		<div class="cont-content" style="color: #999999">Jamia Hamdard,Badarpur Road, Hamdard Nagar,<br> New Delhi, Delhi 110062</div>
-	</div>
-
-	<div class="cont-div">
-		<i class="fa fa-phone" aria-hidden="true"></i>
-		<span class="cont-head">Lets Talk</span>
-		<div class="cont-content">+91-9990480663</div>
-	</div>
-
-	<div class="cont-div">
-		<i class="fa fa-envelope" aria-hidden="true"></i>
-		<span class="cont-head">General Support</span>
-		<div class="cont-content">support@hireling.in</div>
-	</div>
-</div>
-<div class="cont-right">
-	<form action="">
-				<span class="cont-right-head">Send Us A Message</span><br>
-				<label>Tell us your name *</label>
-					<input type="text" name="name" placeholder="First name">
-				
-				<label>Enter your email *</label>
-					<input type="text" name="email" placeholder="Eg. example@email.com">
-				
-				<label>Message *</label>
-					<textarea name="message" rows="5" placeholder="Write us a message"></textarea>
-				
-				<input class="cont-btn" type="submit" name="submit" value="Send Message">
-				
-	</form>
-
-</div>
-</section>
-<!-- <br><br> -->
-
 <section class="sec7"> 
-   <h6>Whatever It Is, We Can Help</h6><br>
-   <div class="sec7-container">
+   <h6>Whatever It Is, We Can Help</h6>
+<hr size="1" color="#1abc9c" width="33%" style="margin-bottom:70px;">
+    <div class="sec7-container">
       <div class="sec7-content">
         <div class="div1"><strong>01</strong></div>
           <div class="div2"><h6><a href="">What kind of work can I get done?</a></h6><br>
@@ -167,7 +148,6 @@
       </div>
 	</div>
 </section>
-<!-- <hr size="1" color="#1abc9c" width="60%"> -->
 
 <section class="sec5" id="about">
 <div class="about">
@@ -227,6 +207,73 @@
 </div>
 </section>
 <div class="teamclear"></div>
+
+
+<section class="sec7"> 
+   <h6>Whatever It Is, We Can Help</h6>
+<hr size="1" color="#1abc9c" width="33%" style="margin-bottom:50px;">
+    <div class="sec7-container">
+      <div class="sec7-content">
+        <div class="div1"><strong>01</strong></div>
+          <div class="div2"><h6><a href="">What kind of work can I get done?</a></h6><br>
+          <p>Small jobs, large jobs, anything in-between</p></div>
+      </div>
+    
+       <div class="sec7-content">
+        <div class="div1"><strong>02</strong></div>
+          <div class="div2"><h6><a href="">How does it Work ?</a></h6><br>
+          <p>1. Post your project<br>2. Choose the perfect freelancer<br>3. Pay when you are satisfied!</p></div>
+      </div>
+      <div class="sec7-content">
+        <div class="div1"><strong>03</strong></div>
+          <div class="div2"><h6><a href="">Get free quotes. It's quick and easy</a></h6>
+          <p>It only takes minutes to create new projects, get competitive quotes and choose your freelancer.</p></div>
+      </div>
+	</div>
+</section>
+<!-- <hr size="1" color="#1abc9c" width="60%"> -->
+
+
+<section class="sec3" id="write">
+<div class="cont-left"></div>
+<div class="cont-left-two">
+	<div class="cont-div">
+		<i class="fa fa-map-marker" aria-hidden="true"></i>
+		<span class="cont-head">Address</span>
+		<div class="cont-content" style="color: #999999">Jamia Hamdard,Badarpur Road, Hamdard Nagar,<br> New Delhi, Delhi 110062</div>
+	</div>
+
+	<div class="cont-div">
+		<i class="fa fa-phone" aria-hidden="true"></i>
+		<span class="cont-head">Lets Talk</span>
+		<div class="cont-content">+91-9990480663</div>
+	</div>
+
+		<div class="cont-div">
+		<i class="fa fa-envelope" aria-hidden="true"></i>
+		<span class="cont-head">General Support</span>
+		<div class="cont-content">support@hireling.in</div>
+	</div>
+</div>
+<div class="cont-right">
+	<form action="">
+				<span class="cont-right-head">Send Us A Message</span><br>
+				<label>Tell us your name *</label>
+					<input type="text" name="name" placeholder="First name">
+				
+				<label>Enter your email *</label>
+					<input type="text" name="email" placeholder="Eg. example@email.com">
+				
+				<label>Message *</label>
+					<textarea name="message" rows="5" placeholder="Write us a message"></textarea>
+				
+				<input class="cont-btn" type="submit" name="submit" value="Send Message">
+				
+	</form>
+
+</div>
+</section>
+<!-- <br><br> -->
 <section class="sec6">
 	<div class="footleft">
 		<h1>WHAT'S HIRELING ???</h1>
@@ -246,6 +293,35 @@
 	</div>
 </section>
 <script src="js/login.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+
 </body>
 </html>
 

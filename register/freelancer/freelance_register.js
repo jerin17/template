@@ -53,11 +53,17 @@ function abc(){
 		{
 			console.log("1");
 			var err=document.getElementById("err");
+			if(name==""){document.forms.msform.f_name.style.border="1px solid red";}
+			if(email==""){document.forms.msform.f_email.style.border="1px solid red";}
+			if(password==""){document.forms.msform.f_password.style.border="1px solid red";}
+			if(cpassword==""){document.forms.msform.f_cpassword.style.border="1px solid red";}
 			err.innerHTML="* fields cannot be blank";
 
 		}
 	else if(password!=cpassword)	
 		{
+			document.forms.msform.f_name.style.border="1px solid lightgrey";
+			document.forms.msform.f_email.style.border="1px solid lightgrey";
 			var err=document.getElementById("err");
 			err.innerHTML="Confirm password doesn't match :(";
 		}
@@ -67,6 +73,9 @@ function abc(){
 			{
 				console.log("2");
 				var err2=document.getElementById("err2");
+				if(phone==""){document.forms.msform.f_phone.style.border="1px solid red";}
+				if(age==""){document.forms.msform.f_age.style.border="1px solid red";}
+				if(gender==""){document.forms.msform.f_gender.style.border="1px solid red";}
 				err2.innerHTML="* fields cannot be blank";
 			}
 

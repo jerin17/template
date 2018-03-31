@@ -399,14 +399,14 @@ section.sec2 h1 span{
 
 .job
 {
-	background: #222A35;
+	background: #f5f5f5;
 	border:.2px solid #ccc;
-	width: 33.3%;
-	display: block;
+	width: 33.3%;	
 	float: left;
 	padding: 30px 0;
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
+	color: black
 }
 
 .job:hover{
@@ -442,7 +442,7 @@ section.sec2{height: auto;}
 
 .job p{
 margin: 0;padding: 0 0 0 15px;
-color: white;
+color: black;
 }
 
 
@@ -469,6 +469,7 @@ color: white;
 }
 
 section.sec3{
+	
 	background:white;
 	background-size: cover;
 	background-attachment: fixed;
@@ -702,11 +703,11 @@ margin-bottom: 20px;
 }
 
 section.sec6{
-	background: url(background/back11.jpeg);
+	background: url(background/back8.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
-	padding: 50px;
-	height: 60vh;
+	padding: 100px;
+	height: 80vh;
 }
 
 
@@ -740,7 +741,7 @@ section.sec6{height: 130vh;}
 	margin-top: 20px;
 }
 .footright p{
-	color: #fff;
+	color: white;
 	filter: brightness(80%);
 	position: absolute;
 	top: -30px;
@@ -764,7 +765,7 @@ section.sec6{height: 130vh;}
 	text-decoration: none;
 }
 .footright ul li a:hover{
-	color: #1abc9c;
+	color: white;
 }
 @media screen and (max-width:750px){
 .footright{float: left;}
@@ -857,6 +858,7 @@ text-align: justify;
 background: rgba(0,0,0,0.6);
 border-radius: 5px;
 cursor: pointer;
+width:100%;
 }
 .biobox:hover{
 	font-weight: bold;
@@ -932,9 +934,11 @@ section.fsec2{
 .editbtn{color: #1abc9c;float: right;margin: 25px 30px 0 0;font-size: 30px;}
 .editbtn:hover{color: #fff;cursor: pointer;}
 #linkcol{color:#0077B5;}
-#gitcol{color:#999;}
+#gitcol{color:white;}
 #facecol{color:#3b5999;}
 #instacol{color:#3f729b;}
+#gpluscol{color: #dd4b39;}
+#greycol{color:grey;}
 
 #detailbox-icon{
 color: #fff;
@@ -1090,7 +1094,9 @@ text-align: center;
 	width: 100%;
 	margin-top: -5px;
 	/*padding-left: 20px;*/
-	text-align: center;
+	/*text-align: center;*/
+	padding-left: 20px;
+	font-size: 110%;
 	margin-bottom:10px;
 	border:none;
 	border-bottom: 1px solid #fff;
@@ -1098,12 +1104,13 @@ text-align: center;
 	outline: none;
 	height: 40px;	
 	color: #fff;
-	font-size: 13px;
+	/*font-size: 13px;*/
 }
 .dashbox form textarea{
 	min-height: 200px;
 	font-size: 110%;
 	padding: 0px;
+	padding-left: 20px;
 	text-align: justify;
 }
 
@@ -1143,7 +1150,7 @@ text-align: center;
 /****************************************************************************************************************/
 section.sec7{
 	margin: 0;
-	background: #141414;
+	background: #263238;
 /*	background: url(background/back10.jpeg);
 	background-size: cover;*/	
 	text-align: center;
@@ -1155,7 +1162,7 @@ section.sec7{
 	height: auto;
 }
 .sec7 h6{
-	margin: 0 0 30px 0;
+	margin: 0 0 15px 0;
 	font-size: 30px;
 	color: #fff;
 }
@@ -1198,3 +1205,137 @@ section.sec7{
 
 /****************************************************************************************************************/
 /****************************************************************************************************************/
+
+section.fjsec1{
+	background: url(background/back10.jpeg);
+	background-size: cover;
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+
+.fjcontainer{
+	padding-top: 80px;
+	display: flex;
+}
+
+.sort{
+margin: 40px;
+float: left;
+position: fixed;
+border-radius: 4px;
+padding: 20px;
+padding-top: 0px;
+width: 300px;
+box-sizing: border-box;
+background: white;
+}
+
+.sort form select{
+	width: 100%;
+	text-align-last: center;
+	margin-top: 7px;
+	margin-bottom: 20px;
+	padding: 2px;
+}
+
+.jobs{
+min-height: 700px;
+margin: 20px;
+background: transparent;
+margin-right: 50px;
+width: 65%;
+float: right;
+background: white;
+}
+
+#job_box,#view_job{
+	background: rgba(0,0,0,0.7);
+	color: grey;
+	padding: 15px;
+	margin-bottom: 20px;
+	padding-bottom: 30px;
+}
+
+#job_table{
+	font-size: 15px;	
+}
+
+
+#job_table tr td:nth-child(3){
+color: white;
+padding-bottom: 4px;
+padding-left: 10px;
+}
+
+.job_app{
+	background: #1abc9c;
+	font-weight: bolder;
+	color: white;
+	border-radius: 5px;
+	float: right;
+	font-size: 14px;
+	margin-top: -12px;
+	padding:5px 15px;
+	text-decoration: none;
+	filter: brightness(80%);
+}
+.job_app:hover{
+	filter: brightness(110%);
+}
+
+#view_job{
+	width: 70%;
+	border-radius: 10px;
+	background: rgba(0,0,0,0.7);
+	margin: 20px auto;
+	margin-top: 80px;
+}
+.capt{color: #1abc9c;font-weight: bolder;font-size: 140%;margin-bottom: 10px;}
+
+section.psec1{
+	font-family: 'Open Sans', sans-serif;
+	height: auto;
+	box-sizing: border-box;
+	display:flex;
+	background: url('background/back5.jpg');
+	background-attachment: fixed;
+	background-size: 1400px 660px;	padding: 90px 60px 10px 60px ;
+}
+
+#post_job{
+	background: rgba(0,0,0,0.8);
+	border-radius: 10px;
+	color: white;
+	width: 50%;
+	height: 100%;
+	margin: 0px auto;
+	padding: 20px;
+}
+
+#post_job form{
+	margin: 20px auto;
+}
+
+#post_job form label{
+	color: white;
+	font-size: 80%;
+}
+
+#post_job form input{
+	color: black;
+	border-radius: 5px;
+	width: 100%;
+	margin-top: 7px;
+	margin-bottom: 15px;
+	padding: 7px;
+	box-sizing: border-box;
+}
+
+#post_job input[type="submit"]
+{
+width: 30%;
+background:#1abc9c;
+border-radius:3px; 
+color:white;
+float: right;
+}

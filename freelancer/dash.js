@@ -7,7 +7,6 @@
 	closebtn.addEventListener('click',closepicture);
 
 	function openpicture(){
-		console.log("openpicture");
 		picturemodal.style.display='block';
 	}
 	function closepicture(){
@@ -21,7 +20,6 @@
 	closebtn.addEventListener('click',closebio);
 
 	function openbio(){
-		console.log("openbio");
 		biomodal.style.display='block';
 	}
 	function closebio(){
@@ -35,7 +33,6 @@
 	closebtn.addEventListener('click',closemodal);
 
 	function opendet1(){
-		console.log("opendet1");
 		det1modal.style.display='block';
 	}
 	function closemodal(){
@@ -49,7 +46,6 @@
 	closebtn.addEventListener('click',closemodal);
 
 	function opendet(){
-		console.log("opendet");
 		det2modal.style.display='block';
 	}
 	function closemodal(){
@@ -63,7 +59,6 @@
 	closebtn.addEventListener('click',closemodal);
 
 	function opendet3(){
-		console.log("openmodal");
 		det3modal.style.display='block';
 	}
 	function closemodal(){
@@ -72,4 +67,15 @@
 //*****************************************************************************************************
 
 
+	var passwordmodal=document.getElementById('passwordmodal');
+	var passwordbtn=document.getElementById('passwordbtn');
+	passwordbtn.addEventListener('click',openpassword);
+	closebtn.addEventListener('click',closemodal);
 
+	function openpassword(){
+		passwordmodal.style.display='block';
+	}
+	function closemodal(){
+		passwordmodal.style.display='none';
+	}
+//*****************************************************************************************************
