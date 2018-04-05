@@ -23,9 +23,7 @@
 <section class="psec1" style="min-height: 100vh;">
 <div id="post_job">
   <center style="font-weight: bolder;font-size: 120%;">POST JOB</center>
-  <form action="r_post.php" method="POST">
-  <input type="hidden" name="r_id" value="<?php echo $_SESSION['r_id'];?>">
-  
+  <form action="post_job.php" method="POST">    
   <label>JOB TYPE :</label><br>
   <input type="text" name="j_type" placeholder="eg : IT / web design/ andorid app / graphic design" required>
   <br><label>DESCRIPTION :</label><br>
@@ -34,9 +32,9 @@
   <input type="text" name="j_sal" placeholder="sptipend /certificate / or any other incentives" required>
   <br><label>LOCATION :</label><br>
   <input type="text" name="j_location" placeholder="work form home / any other location" required>
-  <br><label>TIME :</label><br>
+  <br><label>TIME TO COMPLETE THE JOB :</label><br>
   <input type="text" name="j_time" placeholder="in months" required>
-
+  <input type="text" name="date" hidden value='<?php echo date("d/m/Y"); ?>'>
   <br><br><input type="submit" name="submit" value="POST"><br>
 
 </form>
@@ -45,3 +43,28 @@
 </section>
 </body>
 </html>
+<?php 
+if(isset($_POST['submit']))
+{
+session_start();
+$r_id=$_SESSION['r_id'];
+include '../config.php';
+include 'session.php';
+$j_time=$_POST['j_time'];
+$j_sal=$_POST['j_sal'];
+$j_location=$_POST['j_location'];
+$j_type=$_POST['j_type'];
+$j_description=$_POST['j_description'];
+$j_date=$_POST['date'];
+
+$sql = "INSERT INTO jobs (r_id,j_time, j_sal ,j_location,j_type, j_description,j_date)
+VALUES ('$r_id','$j_time','$j_sal', '$j_location','$j_type','$j_description','$j_date')";
+
+if ($conn->query($sql) === TRUE)
+    $msg="New record created successfully";
+
+else
+    echo "Error: " . $sql . "<br>" . $conn->error;
+
+header('Location:dashboard.php#jobs');
+}?>

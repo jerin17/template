@@ -24,6 +24,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 <div class="header">
   <a href="../../index.php"><img src="../../css/images/logo2.png"></a>
     <h1><a href="../../home.php">Hireling</a></h1>
+    <h3 class="link"><a href="../recruiter">Register as Recruiter</a></h3>
 </div>
 
 <form name="msform" id="msform" action="register.php" method="post" novalidate>
@@ -60,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     <input type="text" name="f_project" placeholder="Project link"/>
     <textarea name="f_skill" placeholder="Skills"></textarea>
     <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="submit" name="register" id="register" disabled class="action-button" value="Submit">
+    <input type="submit" name="register" class="action-button" value="Submit">
     <br><span id ="err3" style="color: red;font-size: 12px;float: right;margin:0;margin-top: 10px;"></span>
 
   </fieldset>

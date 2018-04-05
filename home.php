@@ -33,14 +33,16 @@
         <li><a href="#write">Contact Us</a></li>
         <li><a href="#about">About</a></li>
         <?php 
-		session_start();
+		if(!isset($_SESSION)){session_start();}
 		if (isset($_SESSION['user'])) {
 			if($_SESSION['user']=="f"){
+			echo '<li><a href="freelancer/jobs.php">Jobs</a></li>';	
 			echo '<li><a href="freelancer/dashboard.php">Dashboard</a></li>';	
 			echo '<button class="button" style="background:#e74c3c;"><a href="logout.php" style="color:white;text-decoration:none;">LOGOUT</a></button>';
 			}
 
 			else if($_SESSION['user']=="r"){
+			echo '<li><a href="recruiter/post_job.php">Post Job</a></li>';	
 			echo '<li><a href="recruiter/dashboard.php">Dashboard</a></li>';	
 			echo '<button class="button" style="background:#e74c3c;"><a href="logout.php" style="color:white;text-decoration:none;">LOGOUT</a></button>';
 			}
@@ -51,7 +53,7 @@
 			  <button class="dropbtn">Register</button><i class="fa fa-caret-down" style="color:white;position: absolute;left: 	85px;top: 10px;"></i>
 			  <div class="dropdown-content">
 			    <a href="register/freelancer">Register as a freelancer</a>
-			    <a href="register.php">Register as a Recruiter</a>
+			    <a href="register/recruiter">Register as a Recruiter</a>
 			  </div>
 			</div>
  	    <!-- <li><a id="modalbtn" class="button">LOGIN</a></li> -->
@@ -73,7 +75,7 @@
 		<input type="password" name="password" placeholder="Enter Password" required><i class="fa fa-lock" id="icon"></i>
 		<input type="submit" value="Login as Freelancer" name="freelancer">
 		<input type="submit" value="Login as Recruiter" name="recruiter" id="btn2"><br>
-		<br><a href="#">Forgot Password ?</a><br>
+		<br><a href="forgotpassword.php">Forgot Password ?</a><br>
 		<a href="register/freelancer">Don't have an account yet !</a>
 	</form>
 

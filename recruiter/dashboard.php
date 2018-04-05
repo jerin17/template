@@ -11,7 +11,7 @@
 if(isset($_POST['submitpicture']))
 {
 $target = "profile_pictures/".basename($_FILES['image']['name']);
-echo $image = $_FILES['image']['name'];
+$image = $_FILES['image']['name'];
 $sql = "UPDATE r_details SET r_image='$image' WHERE r_id='$r_id'" ;
 
 if ($conn->query($sql) === TRUE)
@@ -20,11 +20,17 @@ if ($conn->query($sql) === TRUE)
 }
 else 
     echo "Error: " . $sql . "<br>" . $conn->error;
-header('Location:dashboard.php');
+ header('Location:dashboard.php');
 }
 
 
 if(isset($_POST['remove_picture'])){
+  
+if ($row['r_image']!="avatar.png") {
+  $file='profile_pictures/'.$row['r_image'];
+  unlink($file);
+} 
+
 $r_image="avatar.png";
 $sql = "UPDATE r_details SET r_image='$r_image' WHERE r_id='$r_id'" ;
 mysqli_query($conn , $sql); 
@@ -343,35 +349,35 @@ $name=explode(" ",$str)[0];
 </section>
 
 
-<section class="fsec3" id="job_status">
+<section class="fsec3" id="jobs">
 <div class="status">
 <table border="1" bordercolor="#fff" cellspacing="0">
-<caption>Jobs Status</caption>
+<caption>My Jobs</caption>
 <tr> 
   <th>Job ID</th>
   <th>Job Type</th>
   <th>Posted On</th>
-  <th>View Qoute</th>
+  <th>Action</th>
 </tr>
 
+      <?php 
+      $sql="SELECT * FROM jobs WHERE r_id='$r_id'";    
+      $result=mysqli_query($conn,$sql);
+      if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+      ?>
+
 <tr>
-  <td><a href="#">1</a></td>
-  <td>Web Development</td>
-  <td>24/3/2018</td>
-  <td><a href="view_job.php">view job</a></td>
+  <td><?php echo $row['j_id'];?></td>
+  <td><?php echo $row['j_type'];?></td>
+  <td><?php echo $row['j_date'];?></td>
+  <td style="width: 30%"><a href="edit_job.php?j_id=<?php echo $row['j_id'];?>" style="text-decoration: none;padding: 2px 10px;" id="link">Edit</a>
+      <a href="delete_job.php?id=<?php echo $row['j_id'];?>" onclick="return confirm('Do you want to delete this record ?')" style="text-decoration: none;padding: 2px 10px;" id="link">Delete</a>
+      <a href="view_job.php?id=<?php echo $row['j_id'];?>" style="text-decoration: none;padding: 2px 10px;" id="link">View Job</a>
+  </td>
 </tr>
-<tr>
-  <td><a href="#">2</a></td>
-  <td>Web Development</td>
-  <td>24/3/2018</td>
-  <td><a href="view_job.php">view job</a></td>
-</tr>
-<tr>
-  <td><a href="#">3</a></td>
-  <td>Web Development</td>
-  <td>24/3/2018</td>
-  <td><a href="view_job.php">view job</a></td>
-</tr>
+<?php }} ?>
+
 </table>    
 </div>
 </section>

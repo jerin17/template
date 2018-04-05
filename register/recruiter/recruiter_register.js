@@ -7,15 +7,12 @@ var animating; //flag to prevent quick multi-click glitches
 	
 $(".next").click(function(){
 
-var name = document.forms.msform.f_name.value;  	
-var email = document.forms.msform.f_email.value;  	
-var password = document.forms.msform.f_password.value;  	
-var cpassword = document.forms.msform.f_cpassword.value;  	
-var phone = document.forms.msform.f_phone.value;  	
-var age = document.forms.msform.f_age.value;  	
-var gender = document.forms.msform.f_gender.value;  	
-var firm = document.forms.msform.f_firm.value;  	
-var work = document.forms.msform.f_work.value;  	
+var org = document.forms.msform.r_org.value;  	
+var name = document.forms.msform.r_name.value;  	
+var email = document.forms.msform.r_email.value;  	
+var password = document.forms.msform.r_password.value;  	
+var cpassword = document.forms.msform.r_cpassword.value;  	
+var phone = document.forms.msform.r_phone.value;  	
 
 var f=document.getElementsByClassName('field');
 
@@ -49,22 +46,47 @@ function abc(){
 					});
 
 };
-	if(name==""||email==""||password==""||cpassword=="")	
+	if(org==""||name==""||email==""||password==""||cpassword==""||phone=="")	
 		{
 			console.log("1");
-			var err=document.getElementById("err");
+			var err=document.getElementById("err");		
 			err.innerHTML="* fields cannot be blank";
+			if(org=="")
+			document.forms.msform.r_org.setAttribute("style", "border: 1px solid red;");
 
+			if(name=="")
+			document.forms.msform.r_name.setAttribute("style", "border: 1px solid red;");
+
+			if(email=="")
+			document.forms.msform.r_email.setAttribute("style", "border: 1px solid red;");
+
+			if(password=="")
+			document.forms.msform.r_password.setAttribute("style", "border: 1px solid red;");
+
+			if(cpassword=="")
+			document.forms.msform.r_cpassword.setAttribute("style", "border: 1px solid red;");
+
+			if(phone=="")
+			document.forms.msform.r_phone.setAttribute("style", "border: 1px solid red;");
 		}
 	else if(password!=cpassword)	
 		{
+			document.forms.msform.r_org.setAttribute("style", "border: 1px solid grey;");
+			document.forms.msform.r_name.setAttribute("style", "border: 1px solid grey;");
+			document.forms.msform.r_email.setAttribute("style", "border: 1px solid grey;");
+			document.forms.msform.r_phone.setAttribute("style", "border: 1px solid grey;");
+			document.forms.msform.r_password.setAttribute("style", "border: 1px solid red;");
+			document.forms.msform.r_cpassword.setAttribute("style", "border: 1px solid red;");
+
 			var err=document.getElementById("err");
 			err.innerHTML="Confirm password doesn't match :(";
 		}
 		
 	else if(f[1].className=="field act"){
-			if(phone==""||age==""||gender=="")
+			if(phone=="")
 			{
+				if(phone=="")
+				document.forms.msform.r_phone.setAttribute("style", "border: 1px solid red;");
 				console.log("2");
 				var err2=document.getElementById("err2");
 				err2.innerHTML="* fields cannot be blank";

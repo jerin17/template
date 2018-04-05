@@ -81,7 +81,7 @@ body {
 	color: white;
 	text-transform: uppercase;
 	font-size: 9px;
-	width: 33.33%;
+	width: 50%;
 	float: left;
 	position: relative;
 }
@@ -175,7 +175,6 @@ body{
 	filter: brightness(95%);
 	padding: 10px 20px;
 }
-
 .link:hover{
 	filter: brightness(110%);
 	cursor: pointer;

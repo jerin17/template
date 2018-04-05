@@ -24,13 +24,16 @@ header('Location:dashboard.php');
 }
 
 
-if(isset($_POST['remove_picture'])){
+if(isset($_POST['remove_picture'])){  
+if ($row['r_image']!="user.png") {
+  $file='profile_pictures/'.$row['r_image'];
+  unlink($file);
+} 
 $f_image="user.png";
 $sql = "UPDATE f_details SET f_image='$f_image' WHERE f_id='$f_id'" ;
 mysqli_query($conn , $sql); 
 header('Location:dashboard.php#top');
 }
-
 
 if(isset($_POST['submitbio'])){
 $f_bio = mysqli_real_escape_string($conn, $_POST['f_bio']);
@@ -87,7 +90,7 @@ if($file!="")
               echo "Error: " . $sqldet22 . "<br>" . $conn->error;            
         if (@move_uploaded_file($_FILES['file']['tmp_name'] , $target))
            echo "uploaded";
-
+         
         else
             echo "error ".$conn->error;
 }
@@ -95,6 +98,9 @@ header('Location:dashboard.php#details');
 }
 
 if(isset($_POST['remove_resume'])){
+$file='resume/'.$row['f_resume'];
+unlink($file);
+
 $f_resume="";
 $sql = "UPDATE f_details SET f_resume='$f_resume' WHERE f_id='$f_id'" ;
 mysqli_query($conn , $sql); 

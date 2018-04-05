@@ -9,9 +9,8 @@ body{
 ::-webkit-scrollbar-thumb{background: rgba(26,188,156,0.6);}
 ::-webkit-scrollbar-track{background: grey;}
 
-.red{
-	color:#1abc9c;
-}
+#link{color:#fff;}
+#link:hover{color:#1abc9c;}
 
 #header{
 	position: absolute;
@@ -957,6 +956,7 @@ section.fsec3{
 }
 
 .status{
+font-family: 'Open Sans', sans-serif;
 width: 100%;
 height: auto;
 float: left;
@@ -979,7 +979,6 @@ text-align: center;
 .status table tr
 {	
 	color:#222A35; 
-	font-weight: bold;
 	background-color:rgba(0,0,0,0.1);
 }
 
@@ -1321,7 +1320,7 @@ section.psec1{
 	font-size: 80%;
 }
 
-#post_job form input{
+#post_job form input,#post_job form select{
 	color: black;
 	border-radius: 5px;
 	width: 100%;
@@ -1329,6 +1328,15 @@ section.psec1{
 	margin-bottom: 15px;
 	padding: 7px;
 	box-sizing: border-box;
+}
+#post_job form select{
+	text-align-last: center;
+	text-align: center;
+}
+#post_job form select option{
+	text-align-last: center;
+	text-align: center;
+	width: 100%;
 }
 
 #post_job input[type="submit"]

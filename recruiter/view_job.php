@@ -23,7 +23,7 @@
 
 <section class="fsec3">
   <div id="view_job">
-    <span><a href="dashboard.php#job_status"><i class="fa fa-close"  style="float: right;font-size: 25px;color: white;"></i></a></span>
+    <span><a href="dashboard.php#jobs"><i class="fa fa-close"  style="float: right;font-size: 25px;color: white;"></i></a></span>
     <center class="capt"><caption class="capt">Hireling</caption></center>
     <table id="job_table">
     <img src="profile_pictures/logo.png" style="width: 95px;margin-top: 20px;margin-right: 5px;float: right;">
