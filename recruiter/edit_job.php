@@ -2,11 +2,11 @@
 if(isset($_POST['submit']))
 {
 include '../config.php';
-$j_time=$_POST['j_time'];
-$j_sal=$_POST['j_sal'];
-$j_location=$_POST['j_location'];
-$j_type=$_POST['j_type'];
-$j_description=$_POST['j_description'];
+$j_time = mysqli_real_escape_string($conn, $_POST['j_time']);
+$j_sal = mysqli_real_escape_string($conn, $_POST['j_sal']);
+$j_location = mysqli_real_escape_string($conn, $_POST['j_location']);
+$j_type = mysqli_real_escape_string($conn, $_POST['j_type']);
+$j_description = mysqli_real_escape_string($conn, $_POST['j_description']);
 $j_id=$_GET['j_id'];
 
 $sql = "UPDATE jobs SET j_time='$j_time', j_sal='$j_sal' ,j_location='$j_location',j_type='$j_type', j_description='$j_description' WHERE j_id='$j_id'" ;
@@ -17,7 +17,7 @@ if ($conn->query($sql) === TRUE)
 else 
     echo "Error: " . $sql . "<br>" . $conn->error;
 
-header('Location:dashboard.php#jobs');
+header("Location:view_job.php?j_id=".$j_id);
 }?>
 
 <!DOCTYPE html>
@@ -67,7 +67,7 @@ $row=mysqli_fetch_assoc($result);
   <br><label>TIME TO COMPLETE THE JOB :</label><br>
   <input type="text" name="j_time" placeholder="in months" value="<?php echo $row['j_time']; ?>" required>
   <input type="number" name="j_id" hidden value="<?php echo $row['j_time']; ?>"> 
-  <br><br><input type="submit" name="submit" value="POST"><br>
+  <br><br><input type="submit" name="submit" value="Update" style="cursor: pointer;"><br>
 </form>
 
 </div>

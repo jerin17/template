@@ -35,7 +35,7 @@
   <br><label>TIME TO COMPLETE THE JOB :</label><br>
   <input type="text" name="j_time" placeholder="in months" required>
   <input type="text" name="date" hidden value='<?php echo date("d/m/Y"); ?>'>
-  <br><br><input type="submit" name="submit" value="POST"><br>
+  <br><br><input type="submit" name="submit" value="POST" style="cursor: pointer;"><br>
 
 </form>
 
@@ -50,18 +50,18 @@ session_start();
 $r_id=$_SESSION['r_id'];
 include '../config.php';
 include 'session.php';
-$j_time=$_POST['j_time'];
-$j_sal=$_POST['j_sal'];
-$j_location=$_POST['j_location'];
-$j_type=$_POST['j_type'];
-$j_description=$_POST['j_description'];
-$j_date=$_POST['date'];
+$j_time = mysqli_real_escape_string($conn, $_POST['j_time']);
+$j_sal = mysqli_real_escape_string($conn, $_POST['j_sal']);
+$j_location = mysqli_real_escape_string($conn, $_POST['j_location']);
+$j_type = mysqli_real_escape_string($conn, $_POST['j_type']);
+$j_description = mysqli_real_escape_string($conn, $_POST['j_description']);
+$j_date = mysqli_real_escape_string($conn, $_POST['date']);
 
 $sql = "INSERT INTO jobs (r_id,j_time, j_sal ,j_location,j_type, j_description,j_date)
 VALUES ('$r_id','$j_time','$j_sal', '$j_location','$j_type','$j_description','$j_date')";
 
 if ($conn->query($sql) === TRUE)
-    $msg="New record created successfully";
+    echo $msg="New record created successfully";
 
 else
     echo "Error: " . $sql . "<br>" . $conn->error;

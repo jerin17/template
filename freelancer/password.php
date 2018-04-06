@@ -28,10 +28,11 @@
 
 <section class="psec1" style="min-height: 100vh;">
 <div id="post_job" style="margin-top: 40px;">
+    <span><a href="dashboard.php#jobs"><i class="fa fa-close"  style="float: right;font-size: 25px;color: white;"></i></a></span>
 <center style="font-weight: bolder;font-size: 120%;">Change Password</center>
 <form action="password.php" method="POST">
 
-    <label>Old Password</label> 
+    <br><br><label>Old Password</label> 
     <input type="password" name="oldpassword" placeholder="* * * * * * * * *" required><br>
 
     <label>New Password </label> 

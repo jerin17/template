@@ -3,6 +3,6 @@
 	{ header('location: ../home.php');} 
  	
  	else 
- 		{$f_id = $_SESSION['r_id'];}      
+ 		{$r_id = $_SESSION['r_id'];}      
 ?>
 

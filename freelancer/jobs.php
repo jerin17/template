@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">  
     <link rel="icon" type="image/gif" href="../css/images/logo.png"/>
 </head>
-<body style=" background: url(../css/background/back10.jpeg);background-size: cover;background-repeat: repeat;background-attachment: fixed;">
+<body style=" background: url(../css/background/back10.jpg);background-size: cover;background-repeat: repeat;background-attachment: fixed;">
 <div id="header" style="position: fixed;z-index: 3;">
   <a href="../index.php"><img src="../css/images/logo.png"></a>
     <h1><a href="../home.php">Hireling</a></h1>
@@ -58,109 +58,73 @@
 </div>
 
 <div class="jobs" style="background:transparent;">
-  <div id="job_box">    
+      <?php 
+      include '../config.php';
+      $sql="SELECT * FROM jobs";     
+      $result=mysqli_query($conn,$sql);
+      if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+
+        $r_id=$row['r_id'];
+        $sql2="SELECT * FROM recruiters INNER JOIN r_details ON recruiters.r_id=$r_id AND r_details.r_id=$r_id";
+        $result2=mysqli_query($conn,$sql2);
+        $row2 = $result2->fetch_assoc();
+        ?>
+
+  <div class="job_box" id="<?php echo $row['j_id'];?>">    
     <table id="job_table">
-    <img src="../recruiter/profile_pictures/logo2.png" style="width: 95px;margin-right: 5px;float: right;">
-    <tr><td>Organisation</td><td> : </td><td> Google</td></tr>
-    <tr><td>Location    </td><td> : </td><td> Work form home</td>
-    <tr><td>Incentive   </td><td> : </td><td> Rs. 3000</td>
-    <tr><td>Description </td><td> : </td><td> description</td>
-    <tr><td>Time        </td><td> : </td><td> 1 month</td>
+    <a href="org.php?r_id=<?php echo $row['r_id'] ?>"><img src="../recruiter/profile_pictures/<?php echo $row2['r_image']; ?>" style="width: 95px;margin-top: 20px;margin-right: 5px;float: right;"></a>
+    <tr><td>Organisation</td><td> : </td><td style="text-transform: capitalize;font-size: 120%"><a href="org.php?r_id=<?php echo $row['r_id'] ?>" id="revlink"><?php echo $row2['r_org'];?></a></td></tr>
+    <tr><td>Job ID</td><td> : </td><td> <?php echo $row['j_id'];?></td></tr>
+    <tr><td>Job Type</td><td> : </td><td> <?php echo $row['j_type'];?></td></tr>
+    <tr><td>Description </td><td> : </td><td><?php echo $row['j_description'];?></td>
+    <tr><td>Location    </td><td> : </td><td><?php echo $row['j_location'];?></td>
+    <tr><td>Incentive   </td><td> : </td><td>Rs. <?php echo $row['j_sal'];?></td>
+    <tr><td>Time        </td><td> : </td><td><?php echo $row['j_time'];?> months</td>
     </table>
-    <a href="" class="job_app">APPLY NOW</a>
-  </div>
-  <div id="job_box">    
-    <table id="job_table">
-    <img src="../recruiter/profile_pictures/logo2.png" style="width: 95px;margin-right: 5px;float: right;">
-    <tr><td>Organisation</td><td> : </td><td> Google</td></tr>
-    <tr><td>Location    </td><td> : </td><td> Work form home</td>
-    <tr><td>Incentive   </td><td> : </td><td> Rs. 3000</td>
-    <tr><td>Description </td><td> : </td><td> description</td>
-    <tr><td>Time        </td><td> : </td><td> 1 month</td>
-    </table>
-    <a href="" class="job_app">APPLY NOW</a>
-  </div>
-  <div id="job_box">    
-    <table id="job_table">
-    <img src="../recruiter/profile_pictures/logo2.png" style="width: 95px;margin-right: 5px;float: right;">
-    <tr><td>Organisation</td><td> : </td><td> Google</td></tr>
-    <tr><td>Location    </td><td> : </td><td> Work form home</td>
-    <tr><td>Incentive   </td><td> : </td><td> Rs. 3000</td>
-    <tr><td>Description </td><td> : </td><td> description</td>
-    <tr><td>Time        </td><td> : </td><td> 1 month</td>
-    </table>
-    <a href="" class="job_app">APPLY NOW</a>
-  </div>
-  <div id="job_box">    
-    <table id="job_table">
-    <img src="../recruiter/profile_pictures/logo2.png" style="width: 95px;margin-right: 5px;float: right;">
-    <tr><td>Organisation</td><td> : </td><td> Google</td></tr>
-    <tr><td>Location    </td><td> : </td><td> Work form home</td>
-    <tr><td>Incentive   </td><td> : </td><td> Rs. 3000</td>
-    <tr><td>Description </td><td> : </td><td> description</td>
-    <tr><td>Time        </td><td> : </td><td> 1 month</td>
-    </table>
-    <a href="" class="job_app">APPLY NOW</a>
-  </div>
-  <div id="job_box">    
-    <table id="job_table">
-    <img src="../recruiter/profile_pictures/logo2.png" style="width: 95px;margin-right: 5px;float: right;">
-    <tr><td>Organisation</td><td> : </td><td> Google</td></tr>
-    <tr><td>Location    </td><td> : </td><td> Work form home</td>
-    <tr><td>Incentive   </td><td> : </td><td> Rs. 3000</td>
-    <tr><td>Description </td><td> : </td><td> description</td>
-    <tr><td>Time        </td><td> : </td><td> 1 month</td>
-    </table>
-    <a href="" class="job_app">APPLY NOW</a>
-  </div>
-  <div id="job_box">    
-    <table id="job_table">
-    <img src="../recruiter/profile_pictures/logo2.png" style="width: 95px;margin-right: 5px;float: right;">
-    <tr><td>Organisation</td><td> : </td><td> Google</td></tr>
-    <tr><td>Location    </td><td> : </td><td> Work form home</td>
-    <tr><td>Incentive   </td><td> : </td><td> Rs. 3000</td>
-    <tr><td>Description </td><td> : </td><td> description</td>
-    <tr><td>Time        </td><td> : </td><td> 1 month</td>
-    </table>
-    <a href="" class="job_app">APPLY NOW</a>
-  </div>
-  <div id="job_box">    
-    <table id="job_table">
-    <img src="../recruiter/profile_pictures/logo2.png" style="width: 95px;margin-right: 5px;float: right;">
-    <tr><td>Organisation</td><td> : </td><td> Google</td></tr>
-    <tr><td>Location    </td><td> : </td><td> Work form home</td>
-    <tr><td>Incentive   </td><td> : </td><td> Rs. 3000</td>
-    <tr><td>Description </td><td> : </td><td> description</td>
-    <tr><td>Time        </td><td> : </td><td> 1 month</td>
-    </table>
-    <a href="" class="job_app">APPLY NOW</a>
-  </div>
-  <div id="job_box">    
-    <table id="job_table">
-    <img src="../recruiter/profile_pictures/logo2.png" style="width: 95px;margin-right: 5px;float: right;">
-    <tr><td>Organisation</td><td> : </td><td> Google</td></tr>
-    <tr><td>Location    </td><td> : </td><td> Work form home</td>
-    <tr><td>Incentive   </td><td> : </td><td> Rs. 3000</td>
-    <tr><td>Description </td><td> : </td><td> description</td>
-    <tr><td>Time        </td><td> : </td><td> 1 month</td>
-    </table>
-    <a href="" class="job_app">APPLY NOW</a>
-  </div>
-  <div id="job_box">    
-    <table id="job_table">
-    <img src="../recruiter/profile_pictures/logo2.png" style="width: 95px;margin-right: 5px;float: right;">
-    <tr><td>Organisation</td><td> : </td><td> Google</td></tr>
-    <tr><td>Location    </td><td> : </td><td> Work form home</td>
-    <tr><td>Incentive   </td><td> : </td><td> Rs. 3000</td>
-    <tr><td>Description </td><td> : </td><td> description</td>
-    <tr><td>Time        </td><td> : </td><td> 1 month</td>
-    </table>
-    <a href="" class="job_app">APPLY NOW</a>
-  </div>
+    <br>
 
 
+  <?php 
+          @session_start();
+          $f_id=$_SESSION['f_id'];
+          $j_id=$row['j_id'];
+          $sql3="SELECT * FROM apply WHERE f_id='$f_id' AND j_id='$j_id' ";
+          $result3=mysqli_query($conn,$sql3);
+          $row3=mysqli_fetch_assoc($result3);
+          $check=$row3['app'];
 
-</div>
+          $sql4="SELECT * FROM reject WHERE f_id='$f_id' AND j_id='$j_id' ";
+          $result4=mysqli_query($conn,$sql4);
+          $row4=mysqli_fetch_assoc($result4);
+          $reject=$row4['rej'];
+
+          
+          if ($check==='1') 
+          {?>
+            <span style="background: #444;color: white;padding: 10px 20px;display: block;"> Posted on : <?php echo $row['j_date'];?>
+            <a class="job_app" style="color:white;background: orange;">Already Applied</a>
+          <?php
+          }
+          
+          else if ($reject==='2') {?>
+            <span style="background: #444;color: white;padding: 10px 20px;display: block;"> Posted on : <?php echo $row['j_date'];?>
+            <a class="job_app" style="color:white;background: #c0392b;cursor: not-allowed;">Not Selected</a>
+          <?php
+          }
+
+          else
+          {?>
+            <span style="background: #444;color: white;padding: 10px 20px;display: block;"> Posted on : <?php echo $row['j_date'];?>
+            <a class="job_app" href="apply.php?id=<?php echo $row['j_id'];?>">Apply Now</a>
+          <?php
+          }
+?>
+    </span>
+  </div>
+<?php }} ?>
+
+
 </section>
 
 </body>

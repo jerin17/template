@@ -175,7 +175,7 @@ header('Location:dashboard.php#details');
     <label>Name</label>
     <input type="text" name="f_name" value="<?php echo $row['f_name'] ?>" required>
     <label>Email ID</label>
-    <input type="email" style="background: grey;cursor: not-allowed;" name="f_email" value="<?php echo $row['f_email'] ?>" disabled required>
+    <input type="email" style="margin-top: 5px;background: grey;cursor: not-allowed;" name="f_email" value="<?php echo $row['f_email'] ?>" disabled required>
     <label>Contact No.</label>
     <input type="number" name="f_phone" value="<?php echo $row['f_phone'] ?>" required>
     <label>Gender</label>
@@ -262,7 +262,7 @@ header('Location:dashboard.php#details');
     <h2 style="text-transform: capitalize;"><?php echo $row['f_name'];?></h2>
     <p>
     <?php if($row['f_bio']!="") echo $row['f_bio'];?>
-    <?php if ($row['f_bio']=="") echo 'Resume not available';?>
+    <?php if ($row['f_bio']=="") echo 'Biography not available';?>
     </p>
     <b><a id="biobtn" class="editbio">Edit bio</a></b>
 <span id="biospan">Click anywhere on the bio to edit</span>
@@ -272,7 +272,7 @@ header('Location:dashboard.php#details');
 <section class="fsec2" id="details">
 
 <div class="detailbox">
-  <center class="detailbox-head" id="det1btn">Basic</center>
+  <center class="detailbox-head" >Basic</center>
 <table>
 <a id="det1btn" class="editbtn"><i class="fa fa-pencil-square-o"></i></a>
     <tr><td><i id="detailbox-icon" class="fa fa-user"></i></td><td style="text-transform: capitalize;"><?php echo $row['f_name'];?></td></tr>
@@ -286,7 +286,7 @@ header('Location:dashboard.php#details');
 </div>
 
 <div class="detailbox">
-  <center class="detailbox-head" id="det2btn">Personal Details</center>
+  <center class="detailbox-head" >Personal Details</center>
 <table>
 <a id="det2btn" class="editbtn"><i class="fa fa-pencil-square-o"></i></a>
     <tr><td><i id="detailbox-icon" class="fa fa-graduation-cap"></i></td><td style="text-transform: capitalize;"><?php echo $row['f_firm'];?></td></tr>
@@ -312,7 +312,7 @@ header('Location:dashboard.php#details');
 </div>
 
 <div class="detailbox" >
-  <center class="detailbox-head" id="det3btn">Social Links</center>
+  <center class="detailbox-head" >Social Links</center>
 <table>
 <a id="det3btn" class="editbtn"><i class="fa fa-pencil-square-o"></i></a>
 <?php   
@@ -342,7 +342,7 @@ $name=explode(" ",$str)[0];
 
 
 <?php if($row['f_google']!="") {?>
-<tr><td><i id="detailbox-icon" class="fa fa-google-plus"></i></i></i></td><td><a target="blank" href="<?php echo $row["f_google"]?>" id="gpluscol">Connect <?php echo $name ?> on Google Plus <i class="fa fa-external-link" style="font-size: 12px;"></i></a></td></tr>
+<tr><td><i id="detailbox-icon" class="fa fa-google-plus"></i></i></i></td><td><a target="blank" href="<?php echo $row["f_google"]?>" id="gpluscol">Connect <?php echo $name ?> on Google <i class="fa fa-external-link" style="font-size: 12px;"></i></a></td></tr>
 <?php } ?>
 <?php if ($row['f_google']=="") {?>
 <tr><td><i id="detailbox-icon" class="fa fa-google-plus"></i></td><td style="color: grey">Google Plus link not available</td></tr>
@@ -361,8 +361,6 @@ $name=explode(" ",$str)[0];
 </div>
 </section>
 
-
-  <!-- <hr size="1" color="#1abc9c" width="60%" style="background: url(css/background/back6.png));"> -->
 <section class="fsec3">
 <div class="status">
 <table border="1" bordercolor="#fff" cellspacing="0">
@@ -374,24 +372,68 @@ $name=explode(" ",$str)[0];
   <th>Application Status</th>
 </tr>
 
+<?php
+$count=1;
+$sql2="SELECT * FROM apply WHERE f_id='$f_id'";
+$result2=mysqli_query($conn,$sql2);
+if ($result2->num_rows > 0) {
+while($row2 = $result2->fetch_assoc()) {
+
+$j_id=$row2['j_id'];
+// if ($row2['app']==='1') {
+      $sql3="SELECT * FROM jobs WHERE j_id='$j_id'";    
+      $result3=mysqli_query($conn,$sql3);
+      $row3=mysqli_fetch_assoc($result3);
+
+
+$r_id=$row3['r_id'];
+      $sql4="SELECT * FROM recruiters WHERE r_id='$r_id'";    
+      $result4=mysqli_query($conn,$sql4);
+      $row4=mysqli_fetch_assoc($result4);
+
+?>
 <tr>
-  <td>1</td>
-  <td><a href="#">Google</a></td>
-  <td>Web Development</td>
-  <td>applied</td>
+  <td><?php echo $count++; ?></td>
+  <td><a href="org.php?r_id=<?php echo $row4['r_id'];?>" style="text-transform: uppercase;text-decoration: underline;"><?php echo $row4['r_org'];?></a></td>
+    <td><?php echo $row3['j_type']; ?></td>
+<td style="color: #1abc9c">applied</td>
 </tr>
+
+<?php
+
+// }
+}}
+$sql2="SELECT * FROM reject WHERE f_id='$f_id'";
+$result2=mysqli_query($conn,$sql2);
+if ($result2->num_rows > 0) {
+while($row2 = $result2->fetch_assoc()) {
+
+$j_id=$row2['j_id'];
+// if ($row2['app']==='1') {
+      $sql3="SELECT * FROM jobs WHERE j_id='$j_id'";    
+      $result3=mysqli_query($conn,$sql3);
+      $row3=mysqli_fetch_assoc($result3);
+
+
+$r_id=$row3['r_id'];
+      $sql4="SELECT * FROM recruiters WHERE r_id='$r_id'";    
+      $result4=mysqli_query($conn,$sql4);
+      $row4=mysqli_fetch_assoc($result4);
+
+?>
 <tr>
-  <td>1</td>
-  <td><a href="#">Google</a></td>
-  <td>Web Development</td>
-  <td>applied</td>
+  <td><?php echo $count++; ?></td>
+  <td><a href="org.php?r_id=<?php echo $row4['r_id'];?>" style="text-transform: uppercase;text-decoration: underline;"><?php echo $row4['r_org'];?></a></td>
+  <td><?php echo $row3['j_type']; ?></td>
+  <td style="color: red;">not selected</td>
 </tr>
-<tr>
-  <td>1</td>
-  <td><a href="#">Google</a></td>
-  <td>Web Development</td>
-  <td>applied</td>
-</tr>
+
+<?php
+
+}}?>
+
+
+
 </table>    
 </div>
 </section>

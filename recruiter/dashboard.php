@@ -250,14 +250,19 @@ header('Location:dashboard.php#details');
 <section class="fsec2" id="details" >
 
 <div class="detailbox">
-  <center class="detailbox-head" id="det1btn">Basic / HR</center>
+  <center class="detailbox-head">Basic / HR</center>
 <table>
-<a id="det1btn" class="editbtn"><i class="fa fa-pencil-square-o"></i></a>
+<a id="det1btn" class="editbtn"><i class="fa fa-pencil-square-o" id="det1btn"></i></a>
     <tr><td><i id="detailbox-icon" class="fa fa-users"></i></td><td style="text-transform: capitalize;"><?php echo $row['r_org'];?></td><td>( Organisation name )</td></tr>
     <tr><td><i id="detailbox-icon" class="fa fa-user"></i></td><td style="text-transform: capitalize;"><?php echo $row['r_name'];?></td><td>( HR )</td></tr>
     <tr><td><i id="detailbox-icon" class="fa fa-envelope"></i></td><td><?php echo $row['r_email'];?></td></tr>
     <tr><td><i id="detailbox-icon" class="fa fa-phone"></i></td><td><?php echo $row['r_phone'];?></td></tr>
+    <?php if($row['r_city']!="") {?>
     <tr><td><i id="detailbox-icon" class="fa fa-map-marker"></i></td><td style="text-transform: capitalize;"><?php echo $row['r_city'];?></td></tr>
+    <?php } ?>
+    <?php if ($row['r_city']=="") {?>
+    <tr><td><i id="detailbox-icon" class="fa fa-map-marker"></i></td><td style="color: grey">city not availabe </td></tr>
+    <?php } ?>    
 
     <?php if($row['r_website']!="") {?>
     <tr><td><i id="detailbox-icon" class="fa fa-laptop"></i></td><td><a target="blank" href="<?php echo $row["r_website"]?>" ><?php echo $row["r_website"]?> <i class="fa fa-external-link" style="font-size: 12px;"></i></a></td></tr>
@@ -265,6 +270,7 @@ header('Location:dashboard.php#details');
     <?php if ($row['r_website']=="") {?>
     <tr><td><i id="detailbox-icon" class="fa fa-laptop"></i></td><td style="color: grey"> website not availabe </td></tr>
     <?php } ?>    
+
 
 
   
@@ -299,7 +305,7 @@ header('Location:dashboard.php#details');
 </div>
 
 <div class="detailbox" >
-  <center class="detailbox-head" id="det3btn">Social Links</center>
+  <center class="detailbox-head" >Social Links</center>
 <table>
 <a id="det3btn" class="editbtn"><i class="fa fa-pencil-square-o"></i></a>
 <?php   
@@ -371,12 +377,19 @@ $name=explode(" ",$str)[0];
   <td><?php echo $row['j_id'];?></td>
   <td><?php echo $row['j_type'];?></td>
   <td><?php echo $row['j_date'];?></td>
-  <td style="width: 30%"><a href="edit_job.php?j_id=<?php echo $row['j_id'];?>" style="text-decoration: none;padding: 2px 10px;" id="link">Edit</a>
-      <a href="delete_job.php?id=<?php echo $row['j_id'];?>" onclick="return confirm('Do you want to delete this record ?')" style="text-decoration: none;padding: 2px 10px;" id="link">Delete</a>
-      <a href="view_job.php?id=<?php echo $row['j_id'];?>" style="text-decoration: none;padding: 2px 10px;" id="link">View Job</a>
+  <td>
+      <a href="view_job.php?j_id=<?php echo $row['j_id'];?>" style="padding: 2px 10px;" id="link">View Job</a>
   </td>
 </tr>
 <?php }} ?>
+
+<?php
+if ($result->num_rows== 0){?>
+<tr>
+  <td colspan="4">No record to display :( <a href="post_job.php" id="revlink">Click here</a> to Post job</td>
+</tr>
+
+<?php }?>
 
 </table>    
 </div>

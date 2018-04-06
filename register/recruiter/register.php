@@ -4,7 +4,7 @@ if(isset($_POST['register']))
 {
     $r_org=$_POST['r_org'];$r_name=$_POST['r_name'];$r_email=$_POST['r_email'];$r_password=$_POST['r_password'];
     $r_phone=$_POST['r_phone'];$r_website=$_POST['r_website'];$r_city=$_POST['r_city'];
-    $r_bio="";$r_image="avatar.png";$r_website="";$r_linkedin="";$r_github="";$r_facebook="";$r_google="";$r_instagram="";
+    $r_bio="";$r_image="avatar.png";$r_linkedin="";$r_github="";$r_facebook="";$r_google="";$r_instagram="";
 
 
     $sql = "INSERT INTO recruiters (r_name,r_email,r_phone,r_org,r_city,r_password)
@@ -20,7 +20,8 @@ if(isset($_POST['register']))
     VALUES ('$r_id','$r_bio','$r_image','$r_website','$r_linkedin','$r_github','$r_facebook','$r_google','$r_instagram')";
     if ($conn->query($sql) === TRUE)
     {
-        echo "string";
+        echo "You've ben registered successfully. Now you may login";
+        header('Location:../../home.php');
     }
     
     else{    echo "Error: " . $sql . "<br>" . $conn->error;
