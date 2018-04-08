@@ -95,37 +95,27 @@
 <section class="sec2" id="jobs">
 	<h1><b>Start <span>Freelancing</span></b></h1>
 
-	<div class="job">
-		 <img src="css/logo/ravatar.png">
-         <h2>Google</h2>
-		 <p>Web developer / $3000</p>
-	</div>
-	<div class="job">
-		 <img src="css/logo/ravatar.png">
-         <h2>Google</h2>
-		 <p>Web developer / $3000</p>
-	</div>
-	<div class="job">
-		 <img src="css/logo/ravatar.png">
-         <h2>Google</h2>
-		 <p>Web developer / $3000</p>
-	</div>
-	<div class="job">
-		 <img src="css/logo/ravatar.png">
-         <h2>Google</h2>
-		 <p>Web developer / $3000</p>
-	</div>
-	<div class="job">
-		 <img src="css/logo/ravatar.png">
-         <h2>Google</h2>
-		 <p>Web developer / $3000</p>
-	</div>
-	<div class="job">
-		 <img src="css/logo/ravatar.png">
-         <h2>Google</h2>
-		 <p>Web developer / $3000</p>
-	</div>
+	<?php
+	  include 'config.php';
+	  $count=0;
+      $sql="SELECT * FROM jobs";     
+      $result=mysqli_query($conn,$sql);
+      if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+      	$count++;
+        $r_id=$row['r_id'];
+        $sql2="SELECT * FROM recruiters INNER JOIN r_details ON recruiters.r_id=$r_id AND r_details.r_id=$r_id";
+        $result2=mysqli_query($conn,$sql2);
+        $row2 = $result2->fetch_assoc();
+        if($count<=6){
 
+	?>
+<a href="freelancer/jobs.php"><div class="job">
+		 <img src="recruiter/profile_pictures/<?php echo $row2['r_image']; ?>">
+         <h2><?php echo $row2['r_org']; ?></h2>
+		 <p><?php echo $row['j_type']; ?> / Rs. <?php echo $row['j_sal']; ?></p>
+	</div></a>
+	<?php }}} ?>
 </section>
 
 <section class="sec7"> 
@@ -217,18 +207,18 @@
     <div class="sec7-container">
       <div class="sec7-content">
         <div class="div1"><strong>01</strong></div>
-          <div class="div2"><h6><a href="">What kind of work can I get done?</a></h6><br>
+          <div class="div2"><h6><a>What kind of work can I get done?</a></h6><br>
           <p>Small jobs, large jobs, anything in-between</p></div>
       </div>
     
        <div class="sec7-content">
         <div class="div1"><strong>02</strong></div>
-          <div class="div2"><h6><a href="">How does it Work ?</a></h6><br>
+          <div class="div2"><h6><a>How does it Work ?</a></h6><br>
           <p>1. Post your project<br>2. Choose the perfect freelancer<br>3. Pay when you are satisfied!</p></div>
       </div>
       <div class="sec7-content">
         <div class="div1"><strong>03</strong></div>
-          <div class="div2"><h6><a href="">Get free quotes. It's quick and easy</a></h6>
+          <div class="div2"><h6><a>Get free quotes. It's quick and easy</a></h6>
           <p>It only takes minutes to create new projects, get competitive quotes and choose your freelancer.</p></div>
       </div>
 	</div>

@@ -18,7 +18,7 @@ if(isset($_POST['freelancer']))
     }
 
   else{
-        echo $msg = "<center style='background:white;color:#1abc9c'>Invalid Username/Password</center>";
+        echo $msg = '<center style="background: #e74c3c; padding:5px;color: white;font-weight:bolder;">Invalid Username/Password. Please try again </a><a href="home.php" style="float:right;color:white;text-decoration:none"><i class="fa fa-close" id="closebtn" style="color: white;font-size: 20px;"></i></a></a></center>';
         include 'home.php';
       }
 }
@@ -37,7 +37,7 @@ if(isset($_POST['recruiter']))
     }
 
   else{
-        echo $msg = "<center style='background:white;color:#1abc9c'>Invalid Username/Password</center>";
+         echo $msg = '<center style="background: #e74c3c; padding:5px;color: white;font-weight:bolder;">Invalid Username/Password. Please try again </a><a href="home.php" style="float:right;color:white;text-decoration:none"><i class="fa fa-close" id="closebtn" style="color: white;font-size: 20px;"></i></a></a></center>';
         include 'home.php';
       }
 }

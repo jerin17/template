@@ -14,15 +14,28 @@
   <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">  
     <link rel="icon" type="image/gif" href="../css/images/logo.png"/>
 </head>
-<body>
-<div id="header">
+<body style=" background: url(../css/background/back10.jpg);background-size: cover;background-repeat: repeat;background-attachment: fixed;">
+<div id="header" style="position: fixed;z-index: 3;">
   <a href="../index.php"><img src="../css/images/logo.png"></a>
     <h1><a href="../home.php">Hireling</a></h1>
     <div id="navbar">
       <ul>
-        <li><a href="../home.php">Home</a></li>         
-        <li><a href="dashboard.php">Dashboard</a></li>         
-        <button class="button" style="background:#e74c3c;"><a href="../logout.php" style="color:white;text-decoration:none;">LOGOUT</a></button>
+        <?php 
+    if(!isset($_SESSION)){session_start();}
+    if (isset($_SESSION['user'])) {
+      @$f_id=$_SESSION['f_id'];
+      if($f_id!="")
+      {
+      echo '<li><a href="../home.php">Home</a></li>'; 
+      echo '<li><a href="dashboard.php">Dashboard</a></li>'; 
+      echo '<button class="button" style="background:#e74c3c;"><a href="../logout.php" style="color:white;text-decoration:none;">LOGOUT</a></button>';
+      }
+    }
+    else{
+      echo '<li><a href="../home.php">Home</a></li>'; 
+      echo '<button id="modalbtn" class="button" style="padding:10px 20px ">LOGIN</button>';
+   }
+    ?>
     </ul>
    </div> 
 </div>
@@ -39,7 +52,6 @@
     <?php if($row['r_bio']!="") echo $row['r_bio'];?>
     <?php if ($row['r_bio']=="") echo 'Resume not available';?>
     </p>
-    <b><a id="biobtn" class="editbio">Edit bio</a></b>
 </div>
 </section>
 
@@ -187,7 +199,7 @@ $name=explode(" ",$str)[0];
 
   <?php 
           @session_start();
-          $f_id=$_SESSION['f_id'];
+          @$f_id=$_SESSION['f_id'];
           $j_id=$row['j_id'];
           $sql3="SELECT * FROM apply WHERE f_id='$f_id' AND j_id='$j_id' ";
           $result3=mysqli_query($conn,$sql3);
@@ -216,7 +228,7 @@ $name=explode(" ",$str)[0];
           else
           {?>
             <span style="background: #444;color: white;padding: 10px 20px;display: block;"> Posted on : <?php echo $row['j_date'];?>
-            <a class="job_app" href="f_apply.php?id=<?php echo $row['j_id'];?>">Apply Now</a>
+            <a class="job_app" href="apply.php?id=<?php echo $row['j_id'];?>">Apply Now</a>
           <?php
           }
           ?>

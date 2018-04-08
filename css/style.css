@@ -428,11 +428,11 @@ section.sec2{height: auto;}
 
 .job img {
 	background: white; 
-	width: 65px; 
-	height: 65px;
-	padding: 5px;
+	width: 85px; 
+	height: 85px;
+	padding: 2px;
 	border-radius: 50%;
-	border: 3px inset #1abc9c;
+	/*border: 1px inset #1abc9c;*/
 }
 
 .job h2{
@@ -445,6 +445,8 @@ section.sec2{height: auto;}
 .job p{
 margin: 0;padding: 0 0 0 15px;
 color: black;
+font-weight: bold;
+text-transform: capitalize;
 }
 
 
@@ -708,8 +710,8 @@ section.sec6{
 	background: url(background/back10.jpg);
 	background-size: cover;
 	background-attachment: fixed;
-	padding: 100px;
-	height: 80vh;
+	padding: 10px 100px;
+	height: 60vh;
 }
 
 
@@ -1229,15 +1231,42 @@ padding: 20px;
 padding-top: 0px;
 width: 300px;
 box-sizing: border-box;
-background: white;
+background: rgba(0,0,0,0.7);
 }
-
+.sort h1{
+	color: white;
+}
+.sort form label{
+	color: white;
+}
 .sort form select{
 	width: 100%;
-	text-align-last: center;
-	margin-top: 7px;
+	margin-top: 3px;
 	margin-bottom: 20px;
-	padding: 2px;
+	color: black;
+	border-radius: 5px;
+	padding: 7px;
+	box-sizing: border-box;
+	text-align-last: center;
+	text-align: center;
+}
+
+.sort form input[type="submit"]
+{
+margin-top: 15px;
+font-size: 105%;
+width: 30%;
+background:#1abc9c;
+border-radius:3px; 
+color:white;
+float: right;
+cursor: pointer;
+}
+.sort a{
+position: relative;
+top: 15px;
+left:5px;
+color: #1abc9c;
 }
 
 .jobs{
@@ -1282,7 +1311,7 @@ padding-left: 10px;
 	filter: brightness(80%);
 }
 .job_app:hover{
-	filter: brightness(110%);
+	filter: brightness(100%);
 }
 
 #view_job{
