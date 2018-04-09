@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Hireling</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
 
 
 <div id="header">
-	<a href="index.php"><img src="css/images/logo2.png"></a>
+	<a href="index.php"><img src="css/images/logo2.png" alt="Hireling"></a>
     <h1><a href="home.php">Hireling</a></h1>
     <div id="navbar">
       <ul>
@@ -66,7 +66,7 @@
 <div id="simplemodal" class="modal">
 	<div class="loginbox">
 	<a href="home.php"><i class="fa fa-close" id="closebtn" style="position: absolute;top:-40px;left:540px;color: white;font-size: 22px;"></i></a>
-	<img src="css/images/logo.png" class="avatar">	
+	<img src="css/images/logo.png" class="avatar" alt="Hireling">	
 	<h1>Freelancer / Recruiter Login </h1>
 	<form action="login.php" method="post">
 		<p>Email ID</p>
@@ -111,7 +111,7 @@
 
 	?>
 <a href="freelancer/jobs.php"><div class="job">
-		 <img src="recruiter/profile_pictures/<?php echo $row2['r_image']; ?>">
+		 <img src="recruiter/profile_pictures/<?php echo $row2['r_image']; ?>" alt="Hireling">
          <h2><?php echo $row2['r_org']; ?></h2>
 		 <p><?php echo $row['j_type']; ?> / Rs. <?php echo $row['j_sal']; ?></p>
 	</div></a>
@@ -276,11 +276,12 @@
 	<div class="footright">
 		<p> ---- SITEMAP ---- </p>
 		<ul>
-			<li><a href="">Home</a></li>
-			<li><a href="">About</a></li>
-			<li><a href="">Contact</a></li>
-			<li><a href="">Register</a></li>
-			<li><a href="">Login</a></li>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#jobs">Jobs</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#write">Contact</a></li>
+			<li><a href="#home">Register</a></li>
+			<li><a href="#home">Login</a></li>
 		</ul>
 	</div>
 </section>

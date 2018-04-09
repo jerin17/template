@@ -1,20 +1,24 @@
 <?php  
 include '../config.php';
 $f_id=$_GET['f_id'];
-$j_id=$_GET['j_id'];
+ $j_id=$_GET['j_id'];
+ $col=$_GET['col'];
 
 
-	$sql="DELETE FROM apply WHERE f_id='$f_id' AND j_id='$j_id'";
+	if($col==="short")
+	 $sql="DELETE FROM shortlist WHERE f_id='$f_id' AND j_id='$j_id'";
+	else
+	 $sql="DELETE FROM reject WHERE f_id='$f_id' AND j_id='$j_id'";
 
 	if ($conn->query($sql) === TRUE) {
-	    echo "Record deleted successfully";
+	    $msg="Record deleted successfully";
 	} else {
 	    echo "Error deleting record: " . $conn->error;
 	}
 
 
-	$rej=2;
-	$sql2="INSERT INTO reject (f_id,j_id,rej) VALUES ('$f_id','$j_id','$rej') ";
+	$app=1;
+	$sql2="INSERT INTO apply (f_id,j_id,app) VALUES ('$f_id','$j_id','$app') ";
 
 	if ($conn->query($sql2) === TRUE)
 	    echo "New record created successfully";

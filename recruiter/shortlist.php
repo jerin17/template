@@ -13,8 +13,8 @@ $j_id=$_GET['j_id'];
 	}
 
 
-	$rej=2;
-	$sql2="INSERT INTO reject (f_id,j_id,rej) VALUES ('$f_id','$j_id','$rej') ";
+	$short=2;
+	$sql2="INSERT INTO shortlist (f_id,j_id,short) VALUES ('$f_id','$j_id','$short') ";
 
 	if ($conn->query($sql2) === TRUE)
 	    echo "New record created successfully";

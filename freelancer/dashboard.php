@@ -374,6 +374,34 @@ $name=explode(" ",$str)[0];
 
 <?php
 $count=1;
+$sql2="SELECT * FROM shortlist WHERE f_id='$f_id'";
+$result2=mysqli_query($conn,$sql2);
+if ($result2->num_rows > 0) {
+while($row2 = $result2->fetch_assoc()) {
+
+$j_id=$row2['j_id'];
+// if ($row2['app']==='1') {
+      $sql3="SELECT * FROM jobs WHERE j_id='$j_id'";    
+      $result3=mysqli_query($conn,$sql3);
+      $row3=mysqli_fetch_assoc($result3);
+
+
+$r_id=$row3['r_id'];
+      $sql4="SELECT * FROM recruiters WHERE r_id='$r_id'";    
+      $result4=mysqli_query($conn,$sql4);
+      $row4=mysqli_fetch_assoc($result4);
+
+?>
+<tr>
+  <td><?php echo $count++; ?></td>
+  <td><a href="org.php?r_id=<?php echo $row4['r_id'];?>" style="text-transform: uppercase;text-decoration: underline;"><?php echo $row4['r_org'];?></a></td>
+  <td><?php echo $row3['j_type']; ?></td>
+  <td style="color: #009432;">shortlisted</td>
+</tr>
+
+<?php
+
+}}
 $sql2="SELECT * FROM apply WHERE f_id='$f_id'";
 $result2=mysqli_query($conn,$sql2);
 if ($result2->num_rows > 0) {
@@ -403,6 +431,7 @@ $r_id=$row3['r_id'];
 
 // }
 }}
+
 $sql2="SELECT * FROM reject WHERE f_id='$f_id'";
 $result2=mysqli_query($conn,$sql2);
 if ($result2->num_rows > 0) {

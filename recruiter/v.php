@@ -56,7 +56,7 @@ $row2=mysqli_fetch_assoc($result2);
 <br>
 </section>
 <section class="fsec3" style="min-height: 51vh">
-<div class="status" id="status">
+<div class="status">
 <table border="1" bordercolor="#fff" cellspacing="0">
 <caption>Jobs Status</caption>
 <tr> 
