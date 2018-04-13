@@ -211,6 +211,11 @@ $name=explode(" ",$str)[0];
           $row4=mysqli_fetch_assoc($result4);
           $reject=$row4['rej'];
 
+          $sql5="SELECT * FROM shortlist WHERE f_id='$f_id' AND j_id='$j_id' ";
+          $result5=mysqli_query($conn,$sql5);
+          $row5=mysqli_fetch_assoc($result5);
+          $short=$row5['short'];
+
           
           if ($check==='1') 
           {?>
@@ -222,6 +227,12 @@ $name=explode(" ",$str)[0];
           else if ($reject==='2') {?>
             <span style="background: #444;color: white;padding: 10px 20px;display: block;"> Posted on : <?php echo $row['j_date'];?>
             <a class="job_app" style="color:white;background: #c0392b">Not Selected</a>
+          <?php
+          }
+          
+          else if ($short==='2') {?>
+            <span style="background:#009432;color: white;padding: 10px 20px;display: block;"> Posted on : <?php echo $row['j_date'];?>
+            <a class="job_app" style="color:#009432;background: white;cursor: not-allowed;">Shortlisted</a>
           <?php
           }
 

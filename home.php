@@ -248,16 +248,16 @@
 	</div>
 </div>
 <div class="cont-right">
-	<form action="">
+	<form action="contact.php" method="POST">
 				<span class="cont-right-head">Send Us A Message</span><br>
 				<label>Tell us your name *</label>
-					<input type="text" name="name" placeholder="First name">
+					<input type="text" name="name" placeholder="Name ( optional )">
 				
 				<label>Enter your email *</label>
-					<input type="text" name="email" placeholder="Eg. example@email.com">
+					<input type="email" name="email" placeholder="Eg. example@email.com" required>
 				
 				<label>Message *</label>
-					<textarea name="message" rows="5" placeholder="Write us a message"></textarea>
+					<textarea name="message" rows="5" placeholder="Write us a message" required></textarea>
 				
 				<input class="cont-btn" type="submit" name="submit" value="Send Message">
 				

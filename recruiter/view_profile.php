@@ -68,7 +68,7 @@
     <tr><td><i id="detailbox-icon" class="fa fa-phone"></i></td><td style="text-transform: capitalize;"><?php echo $row['f_work'];?></td></tr>
     
     <?php if($row['f_resume']!="") {?>
-    <tr><td><i id="detailbox-icon" class="fa fa-file"></i></td><td style="color:#1abc9c"><a href="resume/<?php echo $row['f_resume'];?>">Download Resume </a><i class="fa fa-download"></i></td></tr>
+    <tr><td><i id="detailbox-icon" class="fa fa-file"></i></td><td style="color:#1abc9c"><a href="../freelancer/resume/<?php echo $row['f_resume'];?>">Download Resume </a><i class="fa fa-download"></i></td></tr>
     <?php } ?>
     <?php if ($row['f_resume']=="") {?>
     <tr><td><i id="detailbox-icon" class="fa fa-file"></i></td><td style="color:grey">Resume not availabe</td></tr>

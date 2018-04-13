@@ -78,7 +78,7 @@ $r_skill = mysqli_real_escape_string($conn, $_POST['r_skill']);
 $sqldet2="UPDATE freelancers SET r_firm='$r_firm',r_work='$r_work',r_skill='$r_skill',r_project='$r_project' WHERE `r_id`=$r_id";
 
   if ($conn->query($sqldet2) === TRUE)
-     echo $msg="Record updated successfully<br>";
+     $msg="Record updated successfully<br>";
   else 
       echo "Error: " . $sqldet2 . "<br>" . $conn->error;
 
@@ -92,11 +92,11 @@ if($file!="")
 
        $sqldet22="UPDATE r_details SET r_resume='$file' WHERE `r_id`=$r_id";             
           if ($conn->query($sqldet22) === TRUE)
-             echo $msg="Resume updated successfully<br>";
+             $msg="Resume updated successfully<br>";
           else 
               echo "Error: " . $sqldet22 . "<br>" . $conn->error;            
         if (@move_uploaded_file($_FILES['file']['tmp_name'] , $target))
-           echo "uploaded";
+           $msg= "uploaded";
 
         else
             echo "error ".$conn->error;

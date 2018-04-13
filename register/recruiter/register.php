@@ -20,8 +20,9 @@ if(isset($_POST['register']))
     VALUES ('$r_id','$r_bio','$r_image','$r_website','$r_linkedin','$r_github','$r_facebook','$r_google','$r_instagram')";
     if ($conn->query($sql) === TRUE)
     {
-        echo "You've ben registered successfully. Now you may login";
-        header('Location:../../home.php');
+        $msg= "You've been registered successfully. Now you may login";
+        echo $msg = '<center style="background: #009432; padding:5px;color: white;font-weight:bolder;">You\'ve been registered successfully. Now you may login </a><a href="home.php" style="float:right;color:white;text-decoration:none"><i class="fa fa-close" id="closebtn" style="color: white;font-size: 20px;"></i></a></a></center>';
+        include '../../index.php';
     }
     
     else{    echo "Error: " . $sql . "<br>" . $conn->error;

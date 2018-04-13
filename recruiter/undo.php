@@ -21,7 +21,7 @@ $f_id=$_GET['f_id'];
 	$sql2="INSERT INTO apply (f_id,j_id,app) VALUES ('$f_id','$j_id','$app') ";
 
 	if ($conn->query($sql2) === TRUE)
-	    echo "New record created successfully";
+	    $msg= "New record created successfully";
 
 	else 
 	    echo "Error: " . $sql2 . "<br>" . $conn->error;

@@ -9,7 +9,7 @@ if($f_id!="")
 $sql="INSERT INTO apply (f_id,j_id,app) VALUES ('$f_id','$j_id','$app') ";
 
 if ($conn->query($sql) === TRUE)
-    echo "New record created successfully";
+    $msg= "New record created successfully";
 
 else 
     echo "Error: " . $sql . "<br>" . $conn->error;

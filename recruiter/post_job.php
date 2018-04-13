@@ -61,7 +61,7 @@ $sql = "INSERT INTO jobs (r_id,j_time, j_sal ,j_location,j_type, j_description,j
 VALUES ('$r_id','$j_time','$j_sal', '$j_location','$j_type','$j_description','$j_date')";
 
 if ($conn->query($sql) === TRUE)
-    echo $msg="New record created successfully";
+    $msg="New record created successfully";
 
 else
     echo "Error: " . $sql . "<br>" . $conn->error;

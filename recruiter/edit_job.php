@@ -12,7 +12,7 @@ $j_id=$_GET['j_id'];
 $sql = "UPDATE jobs SET j_time='$j_time', j_sal='$j_sal' ,j_location='$j_location',j_type='$j_type', j_description='$j_description' WHERE j_id='$j_id'" ;
 
 if ($conn->query($sql) === TRUE) 
-    echo "Record updated successfully";  
+    $msg= "Record updated successfully";  
  
 else 
     echo "Error: " . $sql . "<br>" . $conn->error;

@@ -11,7 +11,7 @@
 if(isset($_POST['submitpicture']))
 {
 $target = "profile_pictures/".basename($_FILES['image']['name']);
-echo $image = $_FILES['image']['name'];
+$image = $_FILES['image']['name'];
 $sql = "UPDATE f_details SET f_image='$image' WHERE f_id='$f_id'" ;
 
 if ($conn->query($sql) === TRUE)
@@ -19,7 +19,7 @@ if ($conn->query($sql) === TRUE)
         @move_uploaded_file($_FILES['image']['tmp_name'] , $target);
 }
 else 
-    echo "Error: " . $sql . "<br>" . $conn->error;
+  $msg= "Error: " . $sql . "<br>" . $conn->error;
 header('Location:dashboard.php');
 }
 
@@ -71,7 +71,7 @@ $f_skill = mysqli_real_escape_string($conn, $_POST['f_skill']);
 $sqldet2="UPDATE freelancers SET f_firm='$f_firm',f_work='$f_work',f_skill='$f_skill',f_project='$f_project' WHERE `f_id`=$f_id";
 
   if ($conn->query($sqldet2) === TRUE)
-     echo $msg="Record updated successfully<br>";
+     $msg="Record updated successfully<br>";
   else 
       echo "Error: " . $sqldet2 . "<br>" . $conn->error;
 
@@ -85,7 +85,7 @@ if($file!="")
 
        $sqldet22="UPDATE f_details SET f_resume='$file' WHERE `f_id`=$f_id";             
           if ($conn->query($sqldet22) === TRUE)
-             echo $msg="Resume updated successfully<br>";
+             $msg="Resume updated successfully<br>";
           else 
               echo "Error: " . $sqldet22 . "<br>" . $conn->error;            
         if (@move_uploaded_file($_FILES['file']['tmp_name'] , $target))
@@ -460,6 +460,13 @@ $r_id=$row3['r_id'];
 <?php
 
 }}?>
+<?php
+if ($count==1){?>
+<tr>
+  <td colspan="4">No record to display :( <a href="jobs.php" id="revlink">Click here</a> to Apply for jobs</td>
+</tr>
+
+<?php }?>
 
 
 
